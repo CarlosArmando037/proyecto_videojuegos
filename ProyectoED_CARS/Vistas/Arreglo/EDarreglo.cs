@@ -16,20 +16,26 @@ namespace ProyectoED_CARS
     {
         //Arreglos aRreglos = new Arreglos();
         VideoJuegoModels VJmodel = new VideoJuegoModels();
-        VideoJuegoModels[] matriz;
+        //VideoJuegoModels[] matriz;
 
 
         int contador=0;
         //Arreglos arreglos=null
+
+        //VideoJuegoModels videojuego = null
         public EDarreglo(VideoJuegoModels videojuego = null)
         {
             InitializeComponent();
 
             if (videojuego != null)
             {
+                
                 MessageBox.Show($"los datos llegaron son: {videojuego.Nombre} Y {videojuego.Precio} ");
 
-
+                VJmodel.Nombre = videojuego.Nombre;
+                VJmodel.Precio = videojuego.Precio;
+                VJmodel.Genero = videojuego.Genero;
+                VJmodel.Plataforma = videojuego.Plataforma;
             }
 
         }
@@ -40,7 +46,8 @@ namespace ProyectoED_CARS
         }
         private void btn_actualizar(object sender, EventArgs e)
         {
-
+            //VideoJuegoModels[] algo;
+            MessageBox.Show(VJmodel.Nombre);
             /*--------respuesta dada del profe
             int fila = dataGridView1.Rows.Add();
 
@@ -51,7 +58,11 @@ namespace ProyectoED_CARS
             */
             int fila = dataGridView1.Rows.Add();
 
-            dataGridView1.Rows[fila].Cells["Ctitulo"].Value = matriz[0].Nombre;
+            dataGridView1.Rows[fila].Cells["Ctitulo"].Value = VJmodel.Nombre;
+            dataGridView1.Rows[fila].Cells["CPrecio"].Value = VJmodel.Precio;
+            dataGridView1.Rows[fila].Cells["CGenero"].Value = VJmodel.Genero;
+            dataGridView1.Rows[fila].Cells["CPlataformas"].Value = VJmodel.Plataforma;
+
 
         }
         Arreglos arreglos= new Arreglos();

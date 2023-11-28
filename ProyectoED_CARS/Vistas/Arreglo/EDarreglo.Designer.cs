@@ -34,12 +34,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ctitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPlataformas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -105,15 +105,25 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Ctitulo,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.CPrecio,
+            this.CGenero,
+            this.CPlataformas});
             this.dataGridView1.Location = new System.Drawing.Point(75, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(615, 150);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(391, 91);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "eliminar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnEliminar);
             // 
             // Column1
             // 
@@ -127,33 +137,23 @@
             this.Ctitulo.Name = "Ctitulo";
             this.Ctitulo.ReadOnly = true;
             // 
-            // Column3
+            // CPrecio
             // 
-            this.Column3.HeaderText = "CPrecio";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.CPrecio.HeaderText = "CPrecio";
+            this.CPrecio.Name = "CPrecio";
+            this.CPrecio.ReadOnly = true;
             // 
-            // Column4
+            // CGenero
             // 
-            this.Column4.HeaderText = "CGenero";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.CGenero.HeaderText = "CGenero";
+            this.CGenero.Name = "CGenero";
+            this.CGenero.ReadOnly = true;
             // 
-            // Column5
+            // CPlataformas
             // 
-            this.Column5.HeaderText = "CPlataformas";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(391, 91);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btnEliminar);
+            this.CPlataformas.HeaderText = "CPlataformas";
+            this.CPlataformas.Name = "CPlataformas";
+            this.CPlataformas.ReadOnly = true;
             // 
             // EDarreglo
             // 
@@ -188,8 +188,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ctitulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CGenero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPlataformas;
     }
 }
