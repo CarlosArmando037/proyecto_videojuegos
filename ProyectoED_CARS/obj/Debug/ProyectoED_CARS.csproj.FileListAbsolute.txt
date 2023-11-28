@@ -1,0 +1,106 @@
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\prueb\Desktop\Estructura_Proyecto\ProyectoED_CARS-main\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Nueva carpeta\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.SuggestedBindingRedirects.cache
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\cd08\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Proyecto videojuegos\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\prueb\Desktop\Estructura_Proyecto\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\elram\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe.config
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.exe
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\bin\Debug\ProyectoED_CARS.pdb
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.AssemblyReference.cache
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.SuggestedBindingRedirects.cache
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.añadir_arreglo.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDcola.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDlista.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDpilas.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Menu.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.EDarreglo.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.Properties.Resources.resources
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.GenerateResource.cache
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.csproj.CoreCompileInputs.cache
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.exe
+C:\Users\cd08\Desktop\Proyecto_videojuegos_\ProyectoED_CARS\obj\Debug\ProyectoED_CARS.pdb
