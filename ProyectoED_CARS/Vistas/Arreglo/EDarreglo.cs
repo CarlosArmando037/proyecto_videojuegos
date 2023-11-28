@@ -58,6 +58,7 @@ namespace ProyectoED_CARS
             */
             int fila = dataGridView1.Rows.Add();
 
+            dataGridView1.Rows[fila].Cells[""].Value = VJmodel.Nombre;
             dataGridView1.Rows[fila].Cells["Ctitulo"].Value = VJmodel.Nombre;
             dataGridView1.Rows[fila].Cells["CPrecio"].Value = VJmodel.Precio;
             dataGridView1.Rows[fila].Cells["CGenero"].Value = VJmodel.Genero;
