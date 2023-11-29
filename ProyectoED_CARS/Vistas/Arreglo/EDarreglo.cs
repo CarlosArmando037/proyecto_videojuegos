@@ -16,10 +16,10 @@ namespace ProyectoED_CARS
     {
         //Arreglos aRreglos = new Arreglos();
         VideoJuegoModels VJmodel = new VideoJuegoModels();
-        //VideoJuegoModels[] matriz;
+        VideoJuegoModels[] matriz = new VideoJuegoModels[10];
 
 
-        int contador=0;
+        //int contador=0;
         //Arreglos arreglos=null
 
         //VideoJuegoModels videojuego = null
@@ -36,6 +36,7 @@ namespace ProyectoED_CARS
                 VJmodel.Precio = videojuego.Precio;
                 VJmodel.Genero = videojuego.Genero;
                 VJmodel.Plataforma = videojuego.Plataforma;
+                VJmodel.contador = videojuego.contador;
             }
 
         }
@@ -58,7 +59,7 @@ namespace ProyectoED_CARS
             */
             int fila = dataGridView1.Rows.Add();
 
-            dataGridView1.Rows[fila].Cells[""].Value = VJmodel.Nombre;
+            dataGridView1.Rows[fila].Cells["ID"].Value = VJmodel.contador;
             dataGridView1.Rows[fila].Cells["Ctitulo"].Value = VJmodel.Nombre;
             dataGridView1.Rows[fila].Cells["CPrecio"].Value = VJmodel.Precio;
             dataGridView1.Rows[fila].Cells["CGenero"].Value = VJmodel.Genero;
@@ -69,11 +70,17 @@ namespace ProyectoED_CARS
         Arreglos arreglos= new Arreglos();
         private void btn_añadir(object sender, EventArgs e)
         {
-            if (arreglos.EstadoArreglo(contador)==true)
+
+            añadir_arreglo añadir_Arreglo = new añadir_arreglo();
+            añadir_Arreglo.Show();
+            /*
+            if (arreglos.EstadoArreglo(VJmodel.contador)==true)
             {
+                //contador++;
                 añadir_arreglo añadir_Arreglo = new añadir_arreglo();
                 añadir_Arreglo.Show();
-            }
+                
+            }*/
 
         }
 

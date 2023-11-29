@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,10 @@ namespace ProyectoED_CARS.Clases
     {
         //Arreglos[] arreglojuegos = new Arreglos[10];
         VideoJuegoModels MvideoJuego = new VideoJuegoModels();
-        VideoJuegoModels[] matriz = new VideoJuegoModels[10]; 
-
+        VideoJuegoModels[] matriz;
         public bool Vacio()
         {
-            if (matriz[0] == null)
+            if (MvideoJuego.contador == 0)
             {
                 return true;
             }
@@ -26,7 +26,7 @@ namespace ProyectoED_CARS.Clases
         {
             if (Vacio())
             {
-                while (contador < matriz.Length)
+                while (MvideoJuego.contador < matriz.Length)
                 {
                     if (matriz[contador] == null)
                     {
@@ -65,7 +65,7 @@ namespace ProyectoED_CARS.Clases
             */
         }
 
-        public void AñadirElementoArreglo(string nombre,string precio,string genero,string plataforma)
+        public void AñadirElementoArreglo(string nombre,string precio,string genero,string plataforma, int contador)
         {
             //VideoJuegoModels[] matriz = new VideoJuegoModels[10];
             
@@ -75,8 +75,8 @@ namespace ProyectoED_CARS.Clases
                 MvideoJuego.Precio = precio;
                 MvideoJuego.Genero = genero;
                 MvideoJuego.Plataforma = plataforma;
-                matriz[0] = MvideoJuego;
-
+                matriz[contador] = MvideoJuego;
+                
             }
             else
             {

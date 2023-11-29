@@ -12,5 +12,8 @@ namespace ProyectoED_CARS.Clases
         public string Precio { get; set; }
         public string Genero { get; set; }
         public string Plataforma { get; set; }
+
+
+        public int contador { get; set; }
     }
 }
