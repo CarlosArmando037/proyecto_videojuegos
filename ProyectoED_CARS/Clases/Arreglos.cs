@@ -57,6 +57,7 @@ namespace ProyectoED_CARS.Clases
                 }
             }
         }
+        //prueba
         public bool EsVacio()
         {
             if (longitud == 0)
