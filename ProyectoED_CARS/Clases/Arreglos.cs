@@ -11,90 +11,148 @@ namespace ProyectoED_CARS.Clases
 {
     public class Arreglos
     {
-        //Arreglos[] arreglojuegos = new Arreglos[10];
-        VideoJuegoModels MvideoJuego = new VideoJuegoModels();
-        VideoJuegoModels[] matriz;
-        public bool Vacio()
+
+        int longitud = 0;
+        int cantidadReal = 0;
+        VideoJuegoModels[] arreglo;
+
+        // contructutor de con argumento opcional longitud
+
+        public Arreglos(int longitud)
         {
-            if (MvideoJuego.contador == 0)
+            arreglo = new VideoJuegoModels[longitud];
+        }
+
+
+        //metodos
+
+        public void InsertarElementoArreglo()
+        {
+            Console.WriteLine("inserte el nombre del juego");
+            arreglo[longitud].Titulo = Console.ReadLine();
+            Console.WriteLine("inserte el precio del juego");
+            arreglo[longitud].Precio = Console.ReadLine();
+            Console.WriteLine("inserte el genero del juego");
+            arreglo[longitud].Genero = Console.ReadLine();
+            Console.WriteLine("inserte el plataforma del juego");
+            arreglo[longitud].Plataforma = Console.ReadLine();
+        }
+        public void InsertarMedio()
+        {
+            int medio = 0;
+            medio = arreglo.Length / 2;
+            Console.WriteLine("inserte el numero de en medio");
+            for (int i = 0; i < arreglo.Length; i++)
+            {
+                if (i == medio)
+                {
+                    Console.WriteLine("inserte el nombre del arreglo");
+                    arreglo[longitud].Titulo = Console.ReadLine();
+                    Console.WriteLine("inserte el nombre del arreglo");
+                    arreglo[longitud].Precio = Console.ReadLine();
+                    Console.WriteLine("inserte el nombre del arreglo");
+                    arreglo[longitud].Genero = Console.ReadLine();
+                    Console.WriteLine("inserte el nombre del arreglo");
+                    arreglo[longitud].Plataforma = Console.ReadLine();
+                }
+            }
+        }
+        public bool EsVacio()
+        {
+            if (longitud == 0)
             {
                 return true;
             }
             return false;
         }
-        public bool EstadoArreglo(int contador)
+        public bool EstaLleno()
         {
-            if (Vacio())
+            if (longitud == arreglo.Length)
             {
-                while (MvideoJuego.contador < matriz.Length)
-                {
-                    if (matriz[contador] == null)
-                    {
-
-
-                        return true;
-                    }
-                    contador++;
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("el arreglo esta vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
             }
             return false;
+        }
+        public int Longitud()
+        {
+            return arreglo.Length;
+        }
 
-            /*
-            int cont = 0;
-
-            if (Vacio())
+        // para eliminar necesitas seleccionar a minimop uno, entonces tenddre que hcaer primero otro
+        public void Eliminar()
+        {
+            Console.WriteLine("inserte el elemento que quiere eliminar:");
+            string elemento = Console.ReadLine();
+            while (elemento != arreglo[longitud].Titulo)
             {
-                MessageBox.Show("el arreglo esta vacio","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                longitud++;
             }
-            else
+            arreglo[longitud].Titulo = "";
+            arreglo[longitud].Precio = "";
+            arreglo[longitud].Genero = "";
+            arreglo[longitud].Plataforma = "";
+
+        }
+
+        /*
+        public void OrdenarAsc()
+        {
+            for (int i =0 ;i < arreglo.Length;i++)
             {
-                for(int i = 0; i < matriz.Length; i++)
+                if (arreglo[i] <arreglo)
                 {
-                    if (matriz[i] != null)
-                    {
-                        cont++;
-                    }
+
                 }
             }
-            return cont;
-            */
         }
+        */
 
-        public void AñadirElementoArreglo(string nombre,string precio,string genero,string plataforma, int contador)
+        public string ObtenerElemento()
         {
-            //VideoJuegoModels[] matriz = new VideoJuegoModels[10];
-            
-            if (Vacio())
+            Console.WriteLine("inserte el elemento que quiere:");
+            string obtener = Console.ReadLine();
+            if (EsVacio())
             {
-                MvideoJuego.Nombre = nombre;
-                MvideoJuego.Precio = precio;
-                MvideoJuego.Genero = genero;
-                MvideoJuego.Plataforma = plataforma;
-                matriz[contador] = MvideoJuego;
-                
+                return "la matriz esta vacia";
             }
             else
             {
-                
+                while (obtener != arreglo[longitud].Titulo)
+                {
+                    longitud++;
+                }
+
+                return $"{arreglo[longitud].Titulo}";
+                //for(string i= obtener;obtener == arreglo[longitud].Titulo; i++ )
             }
-
-            // = titulodeljuego;
         }
-        
-        /*
-        public string MostrarArreglo(VideoJuegoModels[] matriz)
+        public void ObtenerTodosElementos()
         {
-            
-
-            return nombre;
+            for (int j = 0; j < arreglo.Length; j++)
+            {
+                Console.WriteLine($"el juego se llama: {arreglo[longitud].Titulo}, cuesta: {arreglo[longitud].Precio}, de genero: {arreglo[longitud].Genero}, y plataforma: {arreglo[longitud].Plataforma}");
+            }
         }
-        */
-        
+        public void Modificar()
+        {
+            Console.WriteLine("inserte el elemento que quiere Modificar:");
+            string elemento = Console.ReadLine();
+            while (elemento != arreglo[longitud].Titulo)
+            {
+                longitud++;
+            }
+            Console.WriteLine("inserte los nuevos datos");
+
+            Console.WriteLine("inserte el nombre del arreglo");
+            arreglo[longitud].Titulo = Console.ReadLine();
+            Console.WriteLine("inserte el nombre del arreglo");
+            arreglo[longitud].Precio = Console.ReadLine();
+            Console.WriteLine("inserte el nombre del arreglo");
+            arreglo[longitud].Genero = Console.ReadLine();
+            Console.WriteLine("inserte el nombre del arreglo");
+            arreglo[longitud].Plataforma = Console.ReadLine();
+        }
+
 
     }
 }
