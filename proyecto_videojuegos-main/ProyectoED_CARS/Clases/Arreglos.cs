@@ -25,7 +25,7 @@ namespace ProyectoED_CARS.Clases
 
         public Arreglos()
         {
-            arreglo = new VideoJuegoModels[10];
+            arreglo = new VideoJuegoModels[3];
         }
 
 
@@ -136,7 +136,7 @@ namespace ProyectoED_CARS.Clases
             }
             else
             {
-                for (int i = 0; i < arreglo.Length; i++)
+                for (int i = 0; i < cantidadReal; i++)
                 {
                     if (objetivo == arreglo[i].Titulo)
                     {
@@ -175,7 +175,10 @@ namespace ProyectoED_CARS.Clases
             }
 
         }
-
+        public int CantidadReal()
+        {
+            return cantidadReal;
+        }
 
     }
 }
