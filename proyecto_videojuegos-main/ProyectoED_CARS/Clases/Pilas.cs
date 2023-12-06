@@ -12,6 +12,7 @@ namespace ProyectoED_CARS.Clases
         int longitud = 0;
         int cantidadReal = 0;
         VideoJuegoModels[] pilas;
+        VideoJuegoModels[] pilaAux;
 
         // contructutor de con argumento opcional longitud
         //preguntar bien como funcionan las pilas y colas al profe supuestamente puede ser con arreglos;
@@ -20,6 +21,7 @@ namespace ProyectoED_CARS.Clases
         public Pilas()
         {
             pilas = new VideoJuegoModels[10];
+            pilaAux = new VideoJuegoModels[15];
         }
 
         //metodos
@@ -135,8 +137,17 @@ namespace ProyectoED_CARS.Clases
             }
             else
             {
-                for (int i = 0; i < pilas.Length; i++)
+                int count = 0;
+                for (int i = cantidadReal; i > 0; i--)
                 {
+                    //este if hahce que agarrelos datos y los envie a  la pila auxiliar 
+                    if(pilas[cantidadReal] != null)
+                    {
+
+                        pilaAux[count] = pilas[cantidadReal];
+                        count++;
+                    }
+                    // este optro if es el que compara lo que se busca con los datos dentro de la pila
                     if (pilas[i].Titulo == videojuego.Titulo)
                     {
                         MessageBox.Show($"se encontro el elemento en la posicion {i}");

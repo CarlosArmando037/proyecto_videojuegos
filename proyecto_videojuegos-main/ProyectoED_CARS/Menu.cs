@@ -43,5 +43,10 @@ namespace ProyectoED_CARS
             EDcola cola = new EDcola();
             cola.Show();
         }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

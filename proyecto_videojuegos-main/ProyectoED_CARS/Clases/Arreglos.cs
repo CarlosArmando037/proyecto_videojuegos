@@ -39,6 +39,7 @@ namespace ProyectoED_CARS.Clases
             else
             {
                 arreglo[cantidadReal] = videoJuego;
+
                 cantidadReal++;
                 return true;
             }
@@ -57,7 +58,7 @@ namespace ProyectoED_CARS.Clases
         }
         public bool EsVacio()
         {
-            if (longitud == 0)
+            if (cantidadReal == 0)
             {
                 return true;
             }
@@ -127,7 +128,7 @@ namespace ProyectoED_CARS.Clases
         */
 
 
-        public void ObtenerElemento(VideoJuegoModels videojuego)
+        public void ObtenerElemento(string objetivo)
         {
             if (EsVacio())
             {
@@ -137,13 +138,10 @@ namespace ProyectoED_CARS.Clases
             {
                 for (int i = 0; i < arreglo.Length; i++)
                 {
-                    if (arreglo[i].Titulo == videojuego.Titulo)
+                    if (objetivo == arreglo[i].Titulo)
                     {
                         MessageBox.Show($"el juego es {arreglo[i].Titulo}, precio: {arreglo[i].Precio}, genero: {arreglo[i].Genero}, y plataforma: {arreglo[i].Plataforma}");
-                    }
-                    else
-                    {
-                        MessageBox.Show("no se encontro elemento en la lista");
+                        break;
                     }
 
                 }

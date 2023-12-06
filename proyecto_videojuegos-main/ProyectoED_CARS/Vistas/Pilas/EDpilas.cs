@@ -48,7 +48,6 @@ namespace ProyectoED_CARS
                 pilas.InsertarPila(videoJuego);
                 contador++;
             }
-
             txtB_titulo.Text = null;
             txtB_precio.Text = null;
             txtB_genero.Text = null;

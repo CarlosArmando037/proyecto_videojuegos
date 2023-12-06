@@ -40,7 +40,7 @@
             this.CGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPlataformas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
-            this.txtB_longitud = new System.Windows.Forms.TextBox();
+            this.txtB_Buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtB_titulo = new System.Windows.Forms.TextBox();
             this.txtB_precio = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -165,21 +166,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.btnEliminar);
             // 
-            // txtB_longitud
+            // txtB_Buscar
             // 
-            this.txtB_longitud.Location = new System.Drawing.Point(641, 93);
-            this.txtB_longitud.Name = "txtB_longitud";
-            this.txtB_longitud.Size = new System.Drawing.Size(100, 20);
-            this.txtB_longitud.TabIndex = 7;
+            this.txtB_Buscar.Location = new System.Drawing.Point(624, 73);
+            this.txtB_Buscar.Name = "txtB_Buscar";
+            this.txtB_Buscar.Size = new System.Drawing.Size(100, 20);
+            this.txtB_Buscar.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(643, 77);
+            this.label2.Location = new System.Drawing.Point(621, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "cantidad de arreglo";
+            this.label2.Text = "buscar elemento";
             // 
             // txtB_titulo
             // 
@@ -251,12 +252,23 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "plataforma";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(624, 108);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.Text = "buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // EDarreglo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -266,7 +278,7 @@
             this.Controls.Add(this.txtB_precio);
             this.Controls.Add(this.txtB_titulo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtB_longitud);
+            this.Controls.Add(this.txtB_Buscar);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
@@ -292,7 +304,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox txtB_longitud;
+        private System.Windows.Forms.TextBox txtB_Buscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtB_titulo;
         private System.Windows.Forms.TextBox txtB_precio;
@@ -307,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPlataformas;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

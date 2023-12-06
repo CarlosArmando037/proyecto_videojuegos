@@ -101,5 +101,11 @@ namespace ProyectoED_CARS
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string objetivo = txtB_Buscar.Text;
+            arreglos.ObtenerElemento(objetivo);
+        }
     }
 }

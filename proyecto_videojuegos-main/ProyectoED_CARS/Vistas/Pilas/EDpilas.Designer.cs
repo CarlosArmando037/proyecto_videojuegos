@@ -37,7 +37,7 @@
             this.txtB_precio = new System.Windows.Forms.TextBox();
             this.txtB_titulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtB_longitud = new System.Windows.Forms.TextBox();
+            this.txtB_buscar = new System.Windows.Forms.TextBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +49,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_add = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,16 +128,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(665, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 24;
-            this.label2.Text = "cantidad de arreglo";
+            this.label2.Text = "buscar juego";
             // 
-            // txtB_longitud
+            // txtB_buscar
             // 
-            this.txtB_longitud.Location = new System.Drawing.Point(663, 92);
-            this.txtB_longitud.Name = "txtB_longitud";
-            this.txtB_longitud.Size = new System.Drawing.Size(100, 20);
-            this.txtB_longitud.TabIndex = 23;
+            this.txtB_buscar.Location = new System.Drawing.Point(663, 92);
+            this.txtB_buscar.Name = "txtB_buscar";
+            this.txtB_buscar.Size = new System.Drawing.Size(100, 20);
+            this.txtB_buscar.TabIndex = 23;
             // 
             // btn_delete
             // 
@@ -157,7 +158,7 @@
             this.CPrecio,
             this.CGenero,
             this.CPlataformas});
-            this.dataGridView1.Location = new System.Drawing.Point(34, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 146);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(532, 225);
@@ -235,11 +236,21 @@
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(666, 125);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 34;
+            this.btn_buscar.Text = "buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            // 
             // EDpilas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -250,7 +261,7 @@
             this.Controls.Add(this.txtB_precio);
             this.Controls.Add(this.txtB_titulo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtB_longitud);
+            this.Controls.Add(this.txtB_buscar);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_edit);
@@ -275,7 +286,7 @@
         private System.Windows.Forms.TextBox txtB_precio;
         private System.Windows.Forms.TextBox txtB_titulo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtB_longitud;
+        private System.Windows.Forms.TextBox txtB_buscar;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CId;
@@ -287,5 +298,6 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_buscar;
     }
 }
