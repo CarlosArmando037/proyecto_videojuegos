@@ -134,19 +134,20 @@
             // 
             // txtB_buscar
             // 
-            this.txtB_buscar.Location = new System.Drawing.Point(663, 92);
+            this.txtB_buscar.Location = new System.Drawing.Point(646, 92);
             this.txtB_buscar.Name = "txtB_buscar";
             this.txtB_buscar.Size = new System.Drawing.Size(100, 20);
             this.txtB_buscar.TabIndex = 23;
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(296, 90);
+            this.btn_delete.Location = new System.Drawing.Point(299, 92);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 22;
             this.btn_delete.Text = "eliminar";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // dataGridView1
             // 
@@ -158,7 +159,7 @@
             this.CPrecio,
             this.CGenero,
             this.CPlataformas});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 146);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 170);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(532, 225);
@@ -196,16 +197,17 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(182, 90);
+            this.btn_edit.Location = new System.Drawing.Point(159, 92);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(75, 23);
             this.btn_edit.TabIndex = 20;
             this.btn_edit.Text = "modificar";
             this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(413, 90);
+            this.btn_update.Location = new System.Drawing.Point(435, 92);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 19;
@@ -216,15 +218,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(97)))), ((int)(((byte)(138)))));
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(385, 41);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(381, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 28);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Pilas";
+            this.label1.Text = "pilas";
             // 
             // btn_add
             // 
@@ -238,7 +240,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(666, 125);
+            this.btn_buscar.Location = new System.Drawing.Point(646, 128);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 34;

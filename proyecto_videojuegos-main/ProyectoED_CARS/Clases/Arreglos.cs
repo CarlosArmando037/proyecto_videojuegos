@@ -25,7 +25,7 @@ namespace ProyectoED_CARS.Clases
 
         public Arreglos()
         {
-            arreglo = new VideoJuegoModels[10];
+            arreglo = new VideoJuegoModels[3];
         }
 
 
@@ -66,7 +66,7 @@ namespace ProyectoED_CARS.Clases
         }
         public bool EstaLleno()
         {
-            if (longitud == arreglo.Length)
+            if (cantidadReal == arreglo.Length)
             {
                 return true;
             }
@@ -78,17 +78,18 @@ namespace ProyectoED_CARS.Clases
         }
 
         // para eliminar necesitas seleccionar a minimop uno, entonces tenddre que hcaer primero otro
-        public void Eliminar(VideoJuegoModels videoJuego)
+        public void Eliminar( int objetivo)
         {
             //Console.WriteLine("inserte el elemento que quiere eliminar:");
-            for (int i = 0; i < arreglo.Length; i++)
+
+            for (int i = 0; i <= cantidadReal; i++)
             {
-                if (videoJuego.Titulo == arreglo[i].Titulo)
+                if (i == objetivo)
                 {
                     arreglo[i] = null;
                     RecorrerArreglo();
                 }
-                cantidadReal++;
+                cantidadReal--;
             }
         }
         public void RecorrerArreglo()
@@ -99,16 +100,16 @@ namespace ProyectoED_CARS.Clases
                 {
                     if (arreglo[i] == null)
                     {
-                        int temp = j;
-                        i = j;
-                        j = temp;
+                        var temp = arreglo[i];
+                        arreglo[i] = arreglo[j];
+                        arreglo[j] = temp;
                     }
                 }
 
             }
         }
 
-
+        
         //como puedo hacer que me ordene con string?
         /*
         public void OrdenarAsc()
@@ -135,7 +136,7 @@ namespace ProyectoED_CARS.Clases
             }
             else
             {
-                for (int i = 0; i < arreglo.Length; i++)
+                for (int i = 0; i < cantidadReal; i++)
                 {
                     if (objetivo == arreglo[i].Titulo)
                     {
@@ -146,6 +147,7 @@ namespace ProyectoED_CARS.Clases
                 }
             }
         }
+        /*
         public void ObtenerTodosElementos()
         {
             for (int j = 0; j < arreglo.Length; j++)
@@ -156,17 +158,25 @@ namespace ProyectoED_CARS.Clases
                 }
             }
         }
+        */
         public void Modificar(VideoJuegoModels videojuego, int objetivo)
         {
-            for (int i = 0; i < arreglo.Length; i++)
+            if(objetivo < 0)
             {
-                if (i == objetivo)
+                MessageBox.Show("no se aceptan numeros negativos");
+            }
+            for (int i = 0; i < cantidadReal; i++)
+            {
+                if (i == Convert.ToInt32(objetivo))
                 {
 
-                }
+                    arreglo[i] = videojuego;
                 }
             }
-
+        }
+        public int CantidadReal()
+        {
+            return cantidadReal;
         }
 
     }

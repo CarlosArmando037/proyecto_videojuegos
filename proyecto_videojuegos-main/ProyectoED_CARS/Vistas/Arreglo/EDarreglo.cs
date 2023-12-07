@@ -33,29 +33,66 @@ namespace ProyectoED_CARS
         {
 
         }
+
+        //VideoJuegoModels[] matriz;
         private void btn_añadir(object sender, EventArgs e)
         {
 
-            videoJuego.Titulo = txtB_titulo.Text;
-            videoJuego.Precio = txtB_precio.Text;
-            videoJuego.Genero = txtB_genero.Text;
-            if (comboBox1.SelectedItem == null)
+            if(videoJuego.Titulo == "" || videoJuego.Precio == "" || videoJuego.Genero == "" || videoJuego.Plataforma == "")
             {
-                videoJuego.Plataforma = comboBox1.Text.ToString();
+                MessageBox.Show("inserte los datos");
             }
             else
             {
-                videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
-            }
+                VideoJuegoModels videoJuego = new VideoJuegoModels();
 
+                videoJuego.Titulo = txtB_titulo.Text;
+                videoJuego.Precio = txtB_precio.Text;
+                videoJuego.Genero = txtB_genero.Text;
+                if (comboBox1.SelectedItem == null)
+                {
+                    videoJuego.Plataforma = comboBox1.Text.ToString();
+                }
+                else
+                {
+                    videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
+                }
 
-            }
-            else
-            {
                 arreglos.InsertarElementoArreglo(videoJuego);
+                ActualizarDataGridView(videoJuego);
                 contador++;
             }
+            //txtB_titulo.Text = null;
+            //txtB_precio.Text = null;
+            //txtB_genero.Text = null;
+            comboBox1.Text = null;
+            txtB_titulo.Clear();
+            txtB_precio.Clear();
+            txtB_genero.Clear();
+
         }
+
+        VideoJuegoModels[] matriz = new VideoJuegoModels[20];
+        private void ActualizarDataGridView(VideoJuegoModels videoJuego)
+        {
+
+            dataGridView1.Rows.Clear();
+
+            matriz[contador] = videoJuego;
+            for (int i = 0; i <= contador; i++)
+            {
+                
+                int fila = dataGridView1.Rows.Add();
+
+                dataGridView1.Rows[fila].Cells["CId"].Value = i;
+                dataGridView1.Rows[fila].Cells["Ctitulo"].Value = matriz[i].Titulo;
+                dataGridView1.Rows[fila].Cells["CPrecio"].Value = matriz[i].Precio;
+                dataGridView1.Rows[fila].Cells["CGenero"].Value = matriz[i].Genero;
+                dataGridView1.Rows[fila].Cells["CPlataformas"].Value = matriz[i].Plataforma;
+                
+            }
+        }
+        
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -64,9 +101,11 @@ namespace ProyectoED_CARS
 
         private void btnEditar(object sender, EventArgs e)
         {
-            //falta saber como obtener el id de la celda del datagridview
-            int objetivo =2;
+            VideoJuegoModels videoJuego = new VideoJuegoModels();
 
+            //falta saber como obtener el id de la celda del datagridview
+            int objetivo = Convert.ToInt32(txtB_Buscar.Text);
+            
             videoJuego.Titulo = txtB_titulo.Text;
             videoJuego.Precio = txtB_precio.Text;
             videoJuego.Genero = txtB_genero.Text;
@@ -80,11 +119,15 @@ namespace ProyectoED_CARS
             }
 
             arreglos.Modificar(videoJuego, objetivo);
-
+            ActualizarDataGridView(videoJuego);
         }
 
         private void btnEliminar(object sender, EventArgs e)
         {
+            int objetivo = Convert.ToInt32(txtB_Buscar.Text);
+            arreglos.Eliminar(objetivo);
+            contador--;
+            //ActualizarDataGridView(videoJuego);
 
         }
 

@@ -11,6 +11,7 @@ namespace ProyectoED_CARS.Clases
     {
         int longitud = 0;
         int cantidadReal = 0;
+        int cantidadReealAux = 0;
         VideoJuegoModels[] pilas;
         VideoJuegoModels[] pilaAux;
 
@@ -77,18 +78,36 @@ namespace ProyectoED_CARS.Clases
         // para eliminar necesitas seleccionar a minimop uno, entonces tenddre que hcaer primero otro
         
         //para eliminar tienes que encontara un elemento especifico, entonces tienes que mover los elementos de una pila a otra, para encontaralo y eliminarlo;
-        //luego volver a introducir los datos de la pila2 a la pila principal, y el vacio quedara a lo ultimo 
-        public void Eliminar(VideoJuegoModels videoJuego)
+        //luego volver a introducir los datos de la pila2 a la pila principal, y el vacio quedara a lo ultimo
+        public void Eliminar(int objetivo)
         {
             //Console.WriteLine("inserte el elemento que quiere eliminar:");
-            for (int i = 0; i < pilas.Length; i++)
+            if (objetivo < 0)
             {
-                if (videoJuego.Titulo == pilas[i].Titulo)
+                MessageBox.Show("no se aceptan numeros negativos");
+            }
+            for (int i = cantidadReal-1; i > -1; i--)
+            {
+                if (i != objetivo)
+                {
+                    pilaAux[cantidadReealAux] = pilas[i];
+                    cantidadReealAux++;
+                    pilas[i] = null;
+                    cantidadReal--;
+                }
+                else
                 {
                     pilas[i] = null;
-                    RecorrerArreglo();
+                    cantidadReal--;
+                    break; 
                 }
-                cantidadReal++;
+            }
+            for (int i = cantidadReealAux-1; i > -1; i--)
+            {
+
+                pilas[cantidadReal] = pilaAux[i];
+                pilaAux[i] = null;
+                cantidadReealAux--;
             }
         }
         public void RecorrerArreglo()
@@ -168,18 +187,36 @@ namespace ProyectoED_CARS.Clases
             }
 
         }
+
         public void Modificar(VideoJuegoModels videojuego, int objetivo)
         {
-            for (int i = 0; i < pilas.Length; i++)
+            if (objetivo < 0)
             {
-                if (videojuego.Titulo == pilas[i].Titulo)
+                MessageBox.Show("no se aceptan numeros negativos");
+            }
+            for (int i = cantidadReal; i > 0; i--)
+            {
+                if (i != objetivo)
                 {
-                    InsertarPila(videojuego);
+                    pilaAux[cantidadReealAux] = pilas[i];
+                    cantidadReealAux++;
+                    pilas[i] = null;
+                    cantidadReal--;
                 }
-                longitud++;
+                else
+                {
+                    pilas[i] = videojuego;
+                }
+            }
+            for (int i = cantidadReealAux; i > 0 ; i--)
+            {
+                pilas[cantidadReal] = pilaAux[i];
+                cantidadReal++;
+                pilaAux[i] = null;
+                cantidadReealAux--;
             }
         }
-
+        
 
     }
 }
