@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Pilas.cs" />
     <Compile Include="Vistas\Arreglo\añadir arreglo.cs">
       <SubType>Form</SubType>
     </Compile>
