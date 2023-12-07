@@ -178,8 +178,6 @@ namespace ProyectoED_CARS.Clases
                 }
                 longitud++;
             }
-            Console.WriteLine("inserte los nuevos datos");
-
         }
 
 

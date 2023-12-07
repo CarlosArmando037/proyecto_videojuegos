@@ -32,13 +32,6 @@ namespace ProyectoED_CARS
         private void btn_actualizar(object sender, EventArgs e)
         {
 
-            int fila = dataGridView1.Rows.Add();
-
-            dataGridView1.Rows[fila].Cells["CId"].Value = contador;
-            dataGridView1.Rows[fila].Cells["Ctitulo"].Value = videoJuego.Titulo;
-            dataGridView1.Rows[fila].Cells["CPrecio"].Value = videoJuego.Precio;
-            dataGridView1.Rows[fila].Cells["CGenero"].Value = videoJuego.Genero;
-            dataGridView1.Rows[fila].Cells["CPlataformas"].Value = videoJuego.Plataforma;
         }
         private void btn_añadir(object sender, EventArgs e)
         {
@@ -56,19 +49,12 @@ namespace ProyectoED_CARS
             }
 
 
-            if(videoJuego.Titulo == "" || videoJuego.Precio == "" || videoJuego.Genero == "" || videoJuego.Plataforma == "")
-            {
-                MessageBox.Show("inserte los datos");
             }
             else
             {
                 arreglos.InsertarElementoArreglo(videoJuego);
                 contador++;
             }
-            txtB_titulo.Text = null;
-            txtB_precio.Text = null;
-            txtB_genero.Text = null;
-            comboBox1.Text = null;
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

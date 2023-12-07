@@ -103,7 +103,6 @@ namespace ProyectoED_CARS.Clases
                         i = j;
                         j = temp;
                     }
-
                 }
 
             }
@@ -155,9 +154,7 @@ namespace ProyectoED_CARS.Clases
                 {
                     MessageBox.Show($"el juego se llama: {arreglo[j].Titulo}, cuesta: {arreglo[j].Precio}, de genero: {arreglo[j].Genero}, y plataforma: {arreglo[j].Plataforma}");
                 }
-
             }
-            
         }
         public void Modificar(VideoJuegoModels videojuego, int objetivo)
         {
@@ -165,17 +162,12 @@ namespace ProyectoED_CARS.Clases
             {
                 if (i == objetivo)
                 {
-                    InsertarElementoArreglo(videojuego);
 
                 }
-                else
-                {
-                    MessageBox.Show("no se encontro ningun elemento");
                 }
             }
 
         }
-
 
     }
 }
