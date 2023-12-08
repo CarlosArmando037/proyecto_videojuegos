@@ -28,7 +28,7 @@ namespace ProyectoED_CARS
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (videoJuego.Titulo == "" || videoJuego.Precio == "" || videoJuego.Genero == "" || videoJuego.Plataforma == "")
+            if (txtB_titulo.Text == string.Empty || txtB_precio.Text == string.Empty || txtB_genero.Text == string.Empty || comboBox1.Text == string.Empty)
             {
                 MessageBox.Show("inserte los datos");
             }
@@ -37,7 +37,7 @@ namespace ProyectoED_CARS
                 VideoJuegoModels videoJuego = new VideoJuegoModels();
 
                 videoJuego.Titulo = txtB_titulo.Text;
-                videoJuego.Precio = txtB_precio.Text;
+                videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
                 videoJuego.Genero = txtB_genero.Text;
                 if (comboBox1.SelectedItem == null)
                 {
@@ -73,24 +73,26 @@ namespace ProyectoED_CARS
             dataGridView1.Rows[fila].Cells["CPlataformas"].Value = videoJuego.Plataforma;
             */
         }
-        private void ActualizarDataGridView(VideoJuegoModels videoJuego)
+        public void mostrar()
         {
+            VideoJuegoModels[] Pilas = pilas.mostrar();
 
-            dataGridView1.Rows.Clear();
-            VideoJuegoModels[] matriz = new VideoJuegoModels[20];
-            matriz[contador] = videoJuego;
-            for (int i = 0; i <= contador; i++)
+            dataGridView1.Columns.Clear();
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "nombre";
+            dataGridView1.Columns[1].Name = "precio";
+            dataGridView1.Columns[2].Name = "genero";
+            dataGridView1.Columns[3].Name = "plataforma";
+
+            //VideoJuegoModels[] videoJuego;
+            for (int i = 0; i != Pilas.Length; i++)
             {
-
-                int fila = dataGridView1.Rows.Add();
-
-                dataGridView1.Rows[fila].Cells["CId"].Value = i;
-                dataGridView1.Rows[fila].Cells["Ctitulo"].Value = matriz[i].Titulo;
-                dataGridView1.Rows[fila].Cells["CPrecio"].Value = matriz[i].Precio;
-                dataGridView1.Rows[fila].Cells["CGenero"].Value = matriz[i].Genero;
-                dataGridView1.Rows[fila].Cells["CPlataformas"].Value = matriz[i].Plataforma;
-
+                if (Pilas[i] == null)
+                    break;
+                else
+                    dataGridView1.Rows.Add(Pilas[i].Titulo, Pilas[i].Precio, Pilas[i].Genero, Pilas[i].Plataforma);
             }
+        }
         private void btn_edit_Click(object sender, EventArgs e)
         {
             VideoJuegoModels videoJuego = new VideoJuegoModels();
@@ -101,7 +103,7 @@ namespace ProyectoED_CARS
             //prueba para insertar en el repositorio numero 2
 
             videoJuego.Titulo = txtB_titulo.Text;
-            videoJuego.Precio = txtB_precio.Text;
+            videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
             videoJuego.Genero = txtB_genero.Text;
             if (comboBox1.SelectedItem == null)
             {

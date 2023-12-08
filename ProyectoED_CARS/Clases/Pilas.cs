@@ -26,11 +26,11 @@ namespace ProyectoED_CARS.Clases
         }
 
         //metodos
-        public bool InsertarPila(VideoJuegoModels videoJuego)
+        public void InsertarPila(VideoJuegoModels videoJuego)
         {
             if (EstaLleno())
             {
-                return false;
+                MessageBox.Show("el arreglo de la pila principal esta llena");
             }
             else
             {
@@ -145,7 +145,10 @@ namespace ProyectoED_CARS.Clases
         }
         */
 
-
+        public VideoJuegoModels[] mostrar()
+        {
+            return pilas;
+        }
         //obetner elemento esta mal, porque este rrecorre la matriz, lo que se espera es que los añada a otra matriz
         public void ObtenerElemento(VideoJuegoModels videojuego)
         {

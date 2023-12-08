@@ -25,37 +25,84 @@ namespace ProyectoED_CARS.Clases
 
         public Arreglos()
         {
-            arreglo = new VideoJuegoModels[3];
+            arreglo = new VideoJuegoModels[100];
         }
 
 
         //metodos
-        public bool InsertarElementoArreglo(VideoJuegoModels videoJuego)
+        public void InsertarElementoArreglo(VideoJuegoModels videoJuego)
         {
-            if (EstaLleno())
+            MessageBox.Show("en proceso");
+            
+        }
+
+        public VideoJuegoModels[] mostrar()
+        {
+            return arreglo;
+        }
+        public void InsertarMedio(VideoJuegoModels videojuego)
+        {
+            int posicionMedia = cantidadReal / 2;
+
+            for (int i = cantidadReal - 1; i > posicionMedia; i--)
             {
-                return false;
+                arreglo[i] = arreglo[i - 1];
+            }
+            arreglo[posicionMedia] = videojuego;
+
+            /*
+            int medio = 0;
+            medio = cantidadReal / 2;
+            for (int i = 0; i < cantidadReal; i++)
+            {
+                if (i == medio)
+                {
+                    for (int iAux = i; iAux < cantidadReal; iAux++)
+                    {
+                        int minimo = iAux;
+
+                        for (int j = iAux + 1; j < cantidadReal; j++)
+                        {
+                            VideoJuegoModels temporal = arreglo[iAux];
+                            arreglo[iAux] = arreglo[j];
+                            arreglo[j] = temporal;
+
+                        }
+                        //Console.Write(arreglo[i] + " ");
+
+                    }
+
+                    /*
+                    VideoJuegoModels Juegos;
+                    for (int j = i; j < cantidadReal;j++) 
+                    {
+                        Juegos = arreglo[j];
+                        arreglo[j + 1] = Juegos;
+                        arreglo[j] = null;
+                    }
+                    arreglo[i] = videojuego;
+                    
+                }
+            }*/
+
+        }
+        public void InsertarFinal(VideoJuegoModels videoJuego)
+        {
+            if (EsVacio())
+            {
+                InsertarElementoArreglo(videoJuego);
+            }
+            else if(EstaLleno())
+            {
+                MessageBox.Show("el arreglo esta lleno");
             }
             else
             {
                 arreglo[cantidadReal] = videoJuego;
-
                 cantidadReal++;
-                return true;
             }
         }
-        public void InsertarMedio(VideoJuegoModels videojuego)
-        {
-            int medio = 0;
-            medio = arreglo.Length / 2;
-            for (int i = 0; i < arreglo.Length; i++)
-            {
-                if (i == medio)
-                {
-                    arreglo[i] = videojuego;
-                }
-            }
-        }
+        //validacioones de llenado y vacios
         public bool EsVacio()
         {
             if (cantidadReal == 0)
@@ -78,16 +125,17 @@ namespace ProyectoED_CARS.Clases
         }
 
         // para eliminar necesitas seleccionar a minimop uno, entonces tenddre que hcaer primero otro
-        public void Eliminar( int objetivo)
+        public void Eliminar(string objetivo)
         {
             //Console.WriteLine("inserte el elemento que quiere eliminar:");
 
             for (int i = 0; i <= cantidadReal; i++)
             {
-                if (i == objetivo)
+                if (arreglo[i].Titulo == objetivo)
                 {
                     arreglo[i] = null;
                     RecorrerArreglo();
+                    
                 }
                 cantidadReal--;
             }
@@ -108,24 +156,46 @@ namespace ProyectoED_CARS.Clases
             }
         }
 
-        
-        //como puedo hacer que me ordene con string?
-        /*
-        public void OrdenarAsc()
-        {
-            for (int i =0 ;i < arreglo.Length-1;i++)
-            {
-                for (int j = i+1; j<arreglo.Length; j++)
-                {
-                    if (arreglo[j] < arreglo[i])
-                    {
 
+
+        public void OrdenamientoASC()
+        {
+            for (int i = 0; i < cantidadReal; i++)
+            {
+                int minimo = i;
+                for (int j = i + 1; j < cantidadReal; j++)
+                {
+                    if (arreglo[j].Precio > arreglo[minimo].Precio)
+                    {
+                        VideoJuegoModels temporal = arreglo[i];
+                        arreglo[i] = arreglo[j];
+                        arreglo[j] = temporal;
                     }
                 }
+                //Console.Write(arreglo[i] + " ");
+
             }
         }
-        */
+        public void OrdenamientoDES()
+        {
+            for (int i = 0; i < cantidadReal; i++)
+            {
+                int minimo = i;
+                for (int j = i + 1; j < cantidadReal; j++)
+                {
+                    if (arreglo[j].Precio < arreglo[minimo].Precio)
+                    {
+                        VideoJuegoModels temporal = arreglo[i];
+                        arreglo[i] = arreglo[j];
+                        arreglo[j] = temporal;
 
+                    }
+
+                }
+                //Console.Write(arreglo[i] + " ");
+
+            }
+        }
 
         public void ObtenerElemento(string objetivo)
         {
@@ -158,15 +228,17 @@ namespace ProyectoED_CARS.Clases
             }
         }
         */
-        public void Modificar(VideoJuegoModels videojuego, int objetivo)
+        
+        public void Modificar(VideoJuegoModels videojuego, string objetivo)
         {
-            if(objetivo < 0)
+            /*
+            if(objetivo == )
             {
-                MessageBox.Show("no se aceptan numeros negativos");
-            }
+                MessageBox.Show("no se aceptan");
+            }*/
             for (int i = 0; i < cantidadReal; i++)
             {
-                if (i == Convert.ToInt32(objetivo))
+                if (arreglo[i].Titulo == objetivo)
                 {
                     arreglo[i] = videojuego;
                 }

@@ -134,6 +134,7 @@
     <None Include="Resources\2b04906018decd2b26fa10955d0d381e.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\foondoogames.img.avif" />
     <None Include="Resources\link_Zelda_pixelart.jpeg" />
   </ItemGroup>
   <ItemGroup>
