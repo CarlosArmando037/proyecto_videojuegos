@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProyectoED_CARS"
+    "\\ProyectoED_CARS",
+    "\\ProyectoED_CARS\\Vistas",
+    "\\ProyectoED_CARS\\Vistas\\Arreglo"
   ],
-  "SelectedNode": "\\ProyectoED_CARS\\EDarreglo.cs",
+  "SelectedNode": "\\ProyectoED_CARS\\Vistas\\Arreglo\\EDarreglo.cs",
   "PreviewInSolutionExplorer": false
 }

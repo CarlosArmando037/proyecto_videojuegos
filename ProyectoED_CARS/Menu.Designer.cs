@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.btnArray = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.btnPilas = new System.Windows.Forms.Button();
             this.btnColas = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoED_CARS.Properties.Resources.link_Zelda_pixelart;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(475, 499);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // labelTitulo
             // 
@@ -66,7 +56,7 @@
             this.btnArray.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Window;
             this.btnArray.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArray.ForeColor = System.Drawing.Color.White;
-            this.btnArray.Location = new System.Drawing.Point(659, 356);
+            this.btnArray.Location = new System.Drawing.Point(658, 356);
             this.btnArray.Name = "btnArray";
             this.btnArray.Size = new System.Drawing.Size(107, 47);
             this.btnArray.TabIndex = 2;
@@ -83,7 +73,7 @@
             this.btnLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLista.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLista.ForeColor = System.Drawing.Color.White;
-            this.btnLista.Location = new System.Drawing.Point(809, 241);
+            this.btnLista.Location = new System.Drawing.Point(809, 238);
             this.btnLista.Name = "btnLista";
             this.btnLista.Size = new System.Drawing.Size(107, 47);
             this.btnLista.TabIndex = 3;
@@ -123,12 +113,22 @@
             this.btnColas.UseVisualStyleBackColor = false;
             this.btnColas.Click += new System.EventHandler(this.btnColas_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoED_CARS.Properties.Resources.link_Zelda_pixelart;
+            this.pictureBox1.Location = new System.Drawing.Point(71, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(475, 499);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(1193, 719);
+            this.ClientSize = new System.Drawing.Size(1191, 705);
             this.Controls.Add(this.btnColas);
             this.Controls.Add(this.btnPilas);
             this.Controls.Add(this.btnLista);
