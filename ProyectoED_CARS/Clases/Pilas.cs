@@ -36,7 +36,6 @@ namespace ProyectoED_CARS.Clases
             {
                 pilas[cantidadReal] = videoJuego;
                 cantidadReal++;
-                return true;
             }
         }
         //para insertar en el medio tienes que tener otra pila y moverlos de uno a otro

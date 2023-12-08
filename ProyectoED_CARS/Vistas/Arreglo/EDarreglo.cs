@@ -127,7 +127,6 @@ namespace ProyectoED_CARS
             int objetivo = Convert.ToInt32(txtB_Buscar.Text);
             arreglos.Eliminar(objetivo);
             contador--;
-            //ActualizarDataGridView(videoJuego);
 
         }
 

@@ -105,7 +105,6 @@ namespace ProyectoED_CARS.Clases
                         arreglo[j] = temp;
                     }
                 }
-
             }
         }
 
@@ -169,7 +168,6 @@ namespace ProyectoED_CARS.Clases
             {
                 if (i == Convert.ToInt32(objetivo))
                 {
-
                     arreglo[i] = videojuego;
                 }
             }

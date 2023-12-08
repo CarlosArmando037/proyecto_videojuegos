@@ -91,7 +91,6 @@ namespace ProyectoED_CARS
                 dataGridView1.Rows[fila].Cells["CPlataformas"].Value = matriz[i].Plataforma;
 
             }
-        }
         private void btn_edit_Click(object sender, EventArgs e)
         {
             VideoJuegoModels videoJuego = new VideoJuegoModels();
