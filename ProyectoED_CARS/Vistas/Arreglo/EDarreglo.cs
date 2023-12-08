@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,34 +38,42 @@ namespace ProyectoED_CARS
         //VideoJuegoModels[] matriz;
         private void btn_añadir(object sender, EventArgs e)
         {
-
-            if(videoJuego.Titulo == "" || videoJuego.Precio == "" || videoJuego.Genero == "" || videoJuego.Plataforma == "")
+            
+            if (txtB_titulo.Text == string.Empty || txtB_precio.Text == string.Empty || txtB_genero.Text == string.Empty || comboBox1.Text == string.Empty)
             {
-                MessageBox.Show("inserte los datos");
+                MessageBox.Show("inserte todos los datos");
             }
             else
             {
-                VideoJuegoModels videoJuego = new VideoJuegoModels();
-
-                videoJuego.Titulo = txtB_titulo.Text;
-                videoJuego.Precio = txtB_precio.Text;
-                videoJuego.Genero = txtB_genero.Text;
-                if (comboBox1.SelectedItem == null)
+                try
                 {
-                    videoJuego.Plataforma = comboBox1.Text.ToString();
-                }
-                else
-                {
-                    videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
-                }
+                    int dato = Convert.ToInt32(txtB_precio.Text);
 
-                arreglos.InsertarElementoArreglo(videoJuego);
-                ActualizarDataGridView(videoJuego);
-                contador++;
+                    VideoJuegoModels videoJuego = new VideoJuegoModels();
+
+                    videoJuego.Titulo = txtB_titulo.Text;
+                    videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
+                    videoJuego.Genero = txtB_genero.Text;
+                    if (comboBox1.SelectedItem == null)
+                    {
+                        videoJuego.Plataforma = comboBox1.Text.ToString();
+                    }
+                    else
+                    {
+                        videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
+                    }
+
+                    arreglos.InsertarElementoArreglo(videoJuego);
+
+                    contador++;
+                    mostrar();
+                }
+                catch
+                {
+                    MessageBox.Show("el dato de presio es en entero");
+                }  
             }
-            //txtB_titulo.Text = null;
-            //txtB_precio.Text = null;
-            //txtB_genero.Text = null;
+
             comboBox1.Text = null;
             txtB_titulo.Clear();
             txtB_precio.Clear();
@@ -72,27 +81,39 @@ namespace ProyectoED_CARS
 
         }
 
-        VideoJuegoModels[] matriz = new VideoJuegoModels[20];
-        private void ActualizarDataGridView(VideoJuegoModels videoJuego)
+        public void mostrar()
         {
+            VideoJuegoModels[] array = arreglos.mostrar();
 
-            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "nombre";
+            dataGridView1.Columns[1].Name = "precio";
+            dataGridView1.Columns[2].Name = "genero";
+            dataGridView1.Columns[3].Name = "plataforma";
 
-            matriz[contador] = videoJuego;
-            for (int i = 0; i <= contador; i++)
+            //VideoJuegoModels[] videoJuego;
+            for (int i=0; i!=array.Length;i++)
             {
-                
-                int fila = dataGridView1.Rows.Add();
+                if (array[i] == null)
+                    break;
+                else 
+                    dataGridView1.Rows.Add(array[i].Titulo, array[i].Precio, array[i].Genero, array[i].Plataforma);
 
-                dataGridView1.Rows[fila].Cells["CId"].Value = i;
-                dataGridView1.Rows[fila].Cells["Ctitulo"].Value = matriz[i].Titulo;
-                dataGridView1.Rows[fila].Cells["CPrecio"].Value = matriz[i].Precio;
-                dataGridView1.Rows[fila].Cells["CGenero"].Value = matriz[i].Genero;
-                dataGridView1.Rows[fila].Cells["CPlataformas"].Value = matriz[i].Plataforma;
-                
+                /*
+                if (i < contador)
+                {
+                    dataGridView1.Rows.Add(array[i].Titulo, array[i].Precio, array[i].Genero, array[i].Plataforma);
+                    i++;
+                }
+                else if (i>contador)
+                {
+                    dataGridView1.Rows.Add(array[i].Titulo, array[i].Precio, array[i].Genero, array[i].Plataforma);
+                    i--;
+                }*/
             }
+
         }
-        
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -104,10 +125,10 @@ namespace ProyectoED_CARS
             VideoJuegoModels videoJuego = new VideoJuegoModels();
 
             //falta saber como obtener el id de la celda del datagridview
-            int objetivo = Convert.ToInt32(txtB_Buscar.Text);
+            string objetivo = txtB_Buscar.Text;
             
             videoJuego.Titulo = txtB_titulo.Text;
-            videoJuego.Precio = txtB_precio.Text;
+            videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
             videoJuego.Genero = txtB_genero.Text;
             if (comboBox1.SelectedItem == null)
             {
@@ -119,22 +140,120 @@ namespace ProyectoED_CARS
             }
 
             arreglos.Modificar(videoJuego, objetivo);
-            ActualizarDataGridView(videoJuego);
+            mostrar();
+            comboBox1.Text = null;
+            txtB_titulo.Clear();
+            txtB_precio.Clear();
+            txtB_genero.Clear();
+            //ActualizarDataGridView(videoJuego);
         }
 
         private void btnEliminar(object sender, EventArgs e)
         {
-            int objetivo = Convert.ToInt32(txtB_Buscar.Text);
+            string objetivo = txtB_Buscar.Text;
             arreglos.Eliminar(objetivo);
             contador--;
-            //ActualizarDataGridView(videoJuego);
 
+            mostrar();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string objetivo = txtB_Buscar.Text;
             arreglos.ObtenerElemento(objetivo);
+        }
+
+        private void btn_InsMedio_Click(object sender, EventArgs e)
+        {
+
+            if (txtB_titulo.Text == string.Empty || txtB_precio.Text == string.Empty || txtB_genero.Text == string.Empty || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("inserte todos los datos");
+            }
+            else
+            {
+                try
+                {
+                    int dato = Convert.ToInt32(txtB_precio.Text);
+
+                    VideoJuegoModels videoJuego = new VideoJuegoModels();
+
+                    videoJuego.Titulo = txtB_titulo.Text;
+                    videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
+                    videoJuego.Genero = txtB_genero.Text;
+                    if (comboBox1.SelectedItem == null)
+                    {
+                        videoJuego.Plataforma = comboBox1.Text.ToString();
+                    }
+                    else
+                    {
+                        videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
+                    }
+
+                    arreglos.InsertarMedio(videoJuego);
+
+                    contador++;
+                    mostrar();
+                }
+                catch
+                {
+                    MessageBox.Show("el dato de presio es en entero");
+                }
+            }
+        }
+
+        private void btn_ordenarASC_Click(object sender, EventArgs e)
+        {
+            arreglos.OrdenamientoASC();
+            mostrar();
+        }
+
+        private void btn_OrdenarDes_Click(object sender, EventArgs e)
+        {
+            arreglos.OrdenamientoDES();
+            mostrar();
+        }
+
+        private void btn_InsFinal_Click(object sender, EventArgs e)
+        {
+            if (txtB_titulo.Text == string.Empty || txtB_precio.Text == string.Empty || txtB_genero.Text == string.Empty || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("inserte todos los datos");
+            }
+            else
+            {
+                try
+                {
+                    int dato = Convert.ToInt32(txtB_precio.Text);
+
+                    VideoJuegoModels videoJuego = new VideoJuegoModels();
+
+                    videoJuego.Titulo = txtB_titulo.Text;
+                    videoJuego.Precio = Convert.ToInt32(txtB_precio.Text);
+                    videoJuego.Genero = txtB_genero.Text;
+                    if (comboBox1.SelectedItem == null)
+                    {
+                        videoJuego.Plataforma = comboBox1.Text.ToString();
+                    }
+                    else
+                    {
+                        videoJuego.Plataforma = comboBox1.SelectedItem.ToString();
+                    }
+
+                    arreglos.InsertarFinal(videoJuego);
+
+                    contador++;
+                    mostrar();
+                }
+                catch
+                {
+                    MessageBox.Show("el dato de presio es en entero");
+                }
+                comboBox1.Text = null;
+                txtB_titulo.Clear();
+                txtB_precio.Clear();
+                txtB_genero.Clear();
+            }
         }
     }
 }
