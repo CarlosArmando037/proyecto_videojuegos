@@ -122,5 +122,10 @@ namespace ProyectoED_CARS
             int objetivo = Convert.ToInt32(txtB_buscar.Text);
             pilas.Eliminar(objetivo);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

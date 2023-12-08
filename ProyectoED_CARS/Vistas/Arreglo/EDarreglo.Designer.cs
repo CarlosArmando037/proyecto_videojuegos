@@ -33,6 +33,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Ctitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPlataformas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.txtB_Buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,10 +52,7 @@
             this.btn_InsFinal = new System.Windows.Forms.Button();
             this.btn_ordenarASC = new System.Windows.Forms.Button();
             this.btn_OrdenarDes = new System.Windows.Forms.Button();
-            this.Ctitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPlataformas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +116,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(532, 225);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Ctitulo
+            // 
+            this.Ctitulo.HeaderText = "Ctitulo";
+            this.Ctitulo.Name = "Ctitulo";
+            this.Ctitulo.ReadOnly = true;
+            // 
+            // CPrecio
+            // 
+            this.CPrecio.HeaderText = "CPrecio";
+            this.CPrecio.Name = "CPrecio";
+            this.CPrecio.ReadOnly = true;
+            // 
+            // CGenero
+            // 
+            this.CGenero.HeaderText = "CGenero";
+            this.CGenero.Name = "CGenero";
+            this.CGenero.ReadOnly = true;
+            // 
+            // CPlataformas
+            // 
+            this.CPlataformas.HeaderText = "CPlataformas";
+            this.CPlataformas.Name = "CPlataformas";
+            this.CPlataformas.ReadOnly = true;
             // 
             // button4
             // 
@@ -254,29 +279,15 @@
             this.btn_OrdenarDes.UseVisualStyleBackColor = true;
             this.btn_OrdenarDes.Click += new System.EventHandler(this.btn_OrdenarDes_Click);
             // 
-            // Ctitulo
+            // button2
             // 
-            this.Ctitulo.HeaderText = "Ctitulo";
-            this.Ctitulo.Name = "Ctitulo";
-            this.Ctitulo.ReadOnly = true;
-            // 
-            // CPrecio
-            // 
-            this.CPrecio.HeaderText = "CPrecio";
-            this.CPrecio.Name = "CPrecio";
-            this.CPrecio.ReadOnly = true;
-            // 
-            // CGenero
-            // 
-            this.CGenero.HeaderText = "CGenero";
-            this.CGenero.Name = "CGenero";
-            this.CGenero.ReadOnly = true;
-            // 
-            // CPlataformas
-            // 
-            this.CPlataformas.HeaderText = "CPlataformas";
-            this.CPlataformas.Name = "CPlataformas";
-            this.CPlataformas.ReadOnly = true;
+            this.button2.Location = new System.Drawing.Point(586, 415);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "cerrar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EDarreglo
             // 
@@ -284,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_OrdenarDes);
             this.Controls.Add(this.btn_ordenarASC);
             this.Controls.Add(this.btn_InsFinal);
@@ -339,5 +351,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPlataformas;
+        private System.Windows.Forms.Button button2;
     }
 }

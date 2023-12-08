@@ -255,5 +255,10 @@ namespace ProyectoED_CARS
                 txtB_genero.Clear();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
