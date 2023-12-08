@@ -11,15 +11,18 @@ namespace ProyectoED_CARS.Clases
     {
         int longitud = 0;
         int cantidadReal = 0;
+        int cantidadReealAux = 0;
         VideoJuegoModels[] pilas;
+        VideoJuegoModels[] pilaAux;
 
         // contructutor de con argumento opcional longitud
         //preguntar bien como funcionan las pilas y colas al profe supuestamente puede ser con arreglos;
         //pero no se si se utilizen metedos diferentes a los del arreglo en termino de 
 
-        public Pilas(int longitud)
+        public Pilas()
         {
-            pilas = new VideoJuegoModels[longitud];
+            pilas = new VideoJuegoModels[10];
+            pilaAux = new VideoJuegoModels[15];
         }
 
         //metodos
@@ -75,18 +78,36 @@ namespace ProyectoED_CARS.Clases
         // para eliminar necesitas seleccionar a minimop uno, entonces tenddre que hcaer primero otro
         
         //para eliminar tienes que encontara un elemento especifico, entonces tienes que mover los elementos de una pila a otra, para encontaralo y eliminarlo;
-        //luego volver a introducir los datos de la pila2 a la pila principal, y el vacio quedara a lo ultimo 
-        public void Eliminar(VideoJuegoModels videoJuego)
+        //luego volver a introducir los datos de la pila2 a la pila principal, y el vacio quedara a lo ultimo
+        public void Eliminar(int objetivo)
         {
             //Console.WriteLine("inserte el elemento que quiere eliminar:");
-            for (int i = 0; i < pilas.Length; i++)
+            if (objetivo < 0)
             {
-                if (videoJuego.Titulo == pilas[i].Titulo)
+                MessageBox.Show("no se aceptan numeros negativos");
+            }
+            for (int i = cantidadReal-1; i > -1; i--)
+            {
+                if (i != objetivo)
+                {
+                    pilaAux[cantidadReealAux] = pilas[i];
+                    cantidadReealAux++;
+                    pilas[i] = null;
+                    cantidadReal--;
+                }
+                else
                 {
                     pilas[i] = null;
-                    RecorrerArreglo();
+                    cantidadReal--;
+                    break; 
                 }
-                cantidadReal++;
+            }
+            for (int i = cantidadReealAux-1; i > -1; i--)
+            {
+
+                pilas[cantidadReal] = pilaAux[i];
+                pilaAux[i] = null;
+                cantidadReealAux--;
             }
         }
         public void RecorrerArreglo()
@@ -135,8 +156,17 @@ namespace ProyectoED_CARS.Clases
             }
             else
             {
-                for (int i = 0; i < pilas.Length; i++)
+                int count = 0;
+                for (int i = cantidadReal; i > 0; i--)
                 {
+                    //este if hahce que agarrelos datos y los envie a  la pila auxiliar 
+                    if(pilas[cantidadReal] != null)
+                    {
+
+                        pilaAux[count] = pilas[cantidadReal];
+                        count++;
+                    }
+                    // este optro if es el que compara lo que se busca con los datos dentro de la pila
                     if (pilas[i].Titulo == videojuego.Titulo)
                     {
                         MessageBox.Show($"se encontro el elemento en la posicion {i}");
@@ -154,24 +184,39 @@ namespace ProyectoED_CARS.Clases
                 {
                     MessageBox.Show($"el juego se llama: {pilas[j].Titulo}, cuesta: {pilas[j].Precio}, de genero: {pilas[j].Genero}, y plataforma: {pilas[j].Plataforma}");
                 }
-
             }
 
         }
-        public void Modificar(VideoJuegoModels videojuego)
+
+        public void Modificar(VideoJuegoModels videojuego, int objetivo)
         {
-            for (int i = 0; i < pilas.Length; i++)
+            if (objetivo < 0)
             {
-                if (videojuego.Titulo == pilas[i].Titulo)
-                {
-                    InsertarElementoArreglo(videojuego);
-                }
-                longitud++;
+                MessageBox.Show("no se aceptan numeros negativos");
             }
-            Console.WriteLine("inserte los nuevos datos");
-
+            for (int i = cantidadReal; i > 0; i--)
+            {
+                if (i != objetivo)
+                {
+                    pilaAux[cantidadReealAux] = pilas[i];
+                    cantidadReealAux++;
+                    pilas[i] = null;
+                    cantidadReal--;
+                }
+                else
+                {
+                    pilas[i] = videojuego;
+                }
+            }
+            for (int i = cantidadReealAux; i > 0 ; i--)
+            {
+                pilas[cantidadReal] = pilaAux[i];
+                cantidadReal++;
+                pilaAux[i] = null;
+                cantidadReealAux--;
+            }
         }
-
+        
 
     }
 }
