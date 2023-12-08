@@ -143,6 +143,16 @@ namespace ProyectoED_CARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lista__ {
+            get {
+                object obj = ResourceManager.GetObject("lista__", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paisaje {
             get {
                 object obj = ResourceManager.GetObject("paisaje", resourceCulture);
@@ -166,6 +176,16 @@ namespace ProyectoED_CARS.Properties {
         internal static System.Drawing.Bitmap Pixel_Art_Seamless_Background {
             get {
                 object obj = ResourceManager.GetObject("Pixel_Art_Seamless_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Preview_and_Download_Wallpaper___HD_Wallpapers___Desktop_Background_Images {
+            get {
+                object obj = ResourceManager.GetObject("Preview and Download Wallpaper - HD Wallpapers - Desktop Background Images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

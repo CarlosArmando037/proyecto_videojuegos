@@ -30,13 +30,31 @@ namespace ProyectoED_CARS
 
         public void Insertar()
         {
-            Nodo nuevo = new Nodo();
+            if (string.IsNullOrWhiteSpace(textNombre.Text) || string.IsNullOrWhiteSpace(textPrecio.Text) ||
+                string.IsNullOrWhiteSpace(textGenero.Text) || string.IsNullOrWhiteSpace(textConsola.Text))
+            {
+                MessageBox.Show("Llene todos los campos necesarios.");
+                return;
+            }
 
+            int precio;
+            if (!int.TryParse(textPrecio.Text, out precio))
+            {
+                MessageBox.Show("Valor no válido en el campo Precio.");
+                return;
+            }
+
+            Nodo nuevo = new Nodo();
             nuevo.Nombre = Convert.ToString(textNombre.Text);
-            nuevo.Precio = Convert.ToInt32(textPrecio.Text);
+            nuevo.Precio = precio;
             nuevo.Genero = Convert.ToString(textGenero.Text);
             nuevo.Consola = Convert.ToString(textConsola.Text);
 
+            if (ExisteElemento(nuevo.Nombre))
+            {
+                MessageBox.Show("Ya existe un elemento igual.");
+                return;
+            }
 
             if (Primero == null)
             {
@@ -51,6 +69,21 @@ namespace ProyectoED_CARS
                 Ultimo = nuevo;
             }
         }
+
+        public bool ExisteElemento(string nombre)
+        {
+            Nodo actual = Primero;
+            while (actual != null)
+            {
+                if (actual.Nombre == nombre)
+                {
+                    return true;
+                }
+                actual = actual.Siguiente;
+            }
+            return false;
+        }
+
 
 
         public void Mostrar()
@@ -78,74 +111,118 @@ namespace ProyectoED_CARS
 
         public void Modificar()
         {
-            Nodo actual = Primero;
+            string nodoBuscado = Convert.ToString(textNombreModificar.Text);
 
+            if (string.IsNullOrWhiteSpace(nodoBuscado))
+            {
+                MessageBox.Show("Ingrese el nombre del elemento a modificar.");
+                return;
+            }
+
+            Nodo actual = Primero;
             bool Encontrado = false;
 
-            string nodoBuscado = Convert.ToString(textNombreModificar.Text);
-            if (Primero != null)
+            while (actual != null && !Encontrado)
             {
-                while (actual != null && Encontrado != true)
+                if (actual.Nombre == nodoBuscado)
                 {
-                    if (actual.Nombre == nodoBuscado)
-                    {
-                        actual.Nombre = Convert.ToString(textNombre.Text);
-                        actual.Precio = Convert.ToInt32(textPrecio.Text);
-                        actual.Genero = Convert.ToString(textGenero.Text);
-                        actual.Consola = Convert.ToString(textConsola.Text);
-
-
-                        Encontrado = true;
-                    }
-                    actual = actual.Siguiente;
+                    Encontrado = true;
+                    // Realizar la modificación
+                    ModificarNodo(actual);
                 }
-                if (!Encontrado)
-                {
-                    MessageBox.Show("No se encontró");
-                }
+                actual = actual.Siguiente;
             }
+
+            if (!Encontrado)
+            {
+                MessageBox.Show("El elemento no existe.");
+            }
+        }
+
+        public void ModificarNodo(Nodo nodo)
+        {
+            if (string.IsNullOrWhiteSpace(textNombre.Text) || string.IsNullOrWhiteSpace(textPrecio.Text) ||
+                string.IsNullOrWhiteSpace(textGenero.Text) || string.IsNullOrWhiteSpace(textConsola.Text))
+            {
+                MessageBox.Show("Ingrese todos los campos necesarios.");
+                return;
+            }
+
+            int precio;
+            if (!int.TryParse(textPrecio.Text, out precio))
+            {
+                MessageBox.Show("Valor no válido en el campo Precio.");
+                return;
+            }
+
+            // Realizar la modificación del nodo
+            nodo.Nombre = Convert.ToString(textNombre.Text);
+            nodo.Precio = precio;
+            nodo.Genero = Convert.ToString(textGenero.Text);
+            nodo.Consola = Convert.ToString(textConsola.Text);
         }
 
 
         public void EliminarNodo()
         {
-            Nodo Actual = new Nodo();
-            Actual = Primero;
-            Nodo Anterior = new Nodo();
-            Anterior = null;
-
-            bool Encontrado = false;
             string nodoBuscado = Convert.ToString(textNombreModificar.Text);
-            if (Primero != null)
-            {
-                while (Actual != null && Encontrado != true)
-                {
-                    if (Actual.Nombre == nodoBuscado)
-                    {
 
-                        if (Actual == Primero)
-                        {
-                            Primero = Primero.Siguiente;
-                        }
-                        else if (Actual == Ultimo)
-                        {
-                            Anterior.Siguiente = null;
-                            Ultimo = Anterior;
-                        }
-                        else
-                        {
-                            Anterior.Siguiente = Actual.Siguiente;
-                        }
-                        Encontrado = true;
-                    }
-                    Actual = Actual.Siguiente;
-                }
-                if (!Encontrado)
+            if (string.IsNullOrWhiteSpace(nodoBuscado))
+            {
+                MessageBox.Show("Ingrese el nombre del elemento a eliminar.");
+                return;
+            }
+
+            if (Primero == null)
+            {
+                MessageBox.Show("No hay elementos para eliminar.");
+                return;
+            }
+
+            Nodo actual = Primero;
+            Nodo anterior = null;
+            bool Encontrado = false;
+
+            while (actual != null && !Encontrado)
+            {
+                if (actual.Nombre == nodoBuscado)
                 {
-                    MessageBox.Show("No se encontró");
+                    Encontrado = true;
+                    // Realizar la eliminación
+                    EliminarNodoEncontrado(actual, anterior);
+                }
+                else
+                {
+                    anterior = actual;
+                    actual = actual.Siguiente;
                 }
             }
 
+            if (!Encontrado)
+            {
+                MessageBox.Show("El elemento no existe.");
+            }
+        }
+
+        public void EliminarNodoEncontrado(Nodo nodo, Nodo anterior)
+        {
+            if (nodo == Primero)
+            {
+                Primero = Primero.Siguiente;
+                if (Primero == null)
+                {
+                    Ultimo = null;
+                }
+            }
+            else if (nodo == Ultimo)
+            {
+                anterior.Siguiente = null;
+                Ultimo = anterior;
+            }
+            else
+            {
+                anterior.Siguiente = nodo.Siguiente;
+            }
         }
 
 
@@ -240,6 +317,118 @@ namespace ProyectoED_CARS
             } while (intercambio);
         }
 
+        public void InsertarAlInicio()
+        {
+            if (string.IsNullOrWhiteSpace(textNombre.Text) || string.IsNullOrWhiteSpace(textPrecio.Text) ||
+                string.IsNullOrWhiteSpace(textGenero.Text) || string.IsNullOrWhiteSpace(textConsola.Text))
+            {
+                MessageBox.Show("Llene todos los campos necesarios.");
+                return;
+            }
+
+            int precio;
+            if (!int.TryParse(textPrecio.Text, out precio))
+            {
+                MessageBox.Show("Valor no válido en el campo Precio.");
+                return;
+            }
+
+            Nodo nuevo = new Nodo();
+            nuevo.Nombre = Convert.ToString(textNombre.Text);
+            nuevo.Precio = precio;
+            nuevo.Genero = Convert.ToString(textGenero.Text);
+            nuevo.Consola = Convert.ToString(textConsola.Text);
+
+            if (ExisteElemento(nuevo.Nombre))
+            {
+                MessageBox.Show("Ya existe un elemento igual.");
+                return;
+            }
+
+            if (Primero == null)
+            {
+                Primero = nuevo;
+                Primero.Siguiente = null;
+                Ultimo = nuevo;
+            }
+            else
+            {
+                nuevo.Siguiente = Primero;
+                Primero = nuevo;
+            }
+        }
+
+
+
+
+        public void InsertarEnElMedio()
+        {
+            if (string.IsNullOrWhiteSpace(textNombre.Text) || string.IsNullOrWhiteSpace(textPrecio.Text) ||
+                string.IsNullOrWhiteSpace(textGenero.Text) || string.IsNullOrWhiteSpace(textConsola.Text))
+            {
+                MessageBox.Show("Llene todos los campos necesarios.");
+                return;
+            }
+
+            int precio;
+            if (!int.TryParse(textPrecio.Text, out precio))
+            {
+                MessageBox.Show("Valor no válido en el campo Precio.");
+                return;
+            }
+
+            Nodo nuevo = new Nodo();
+            nuevo.Nombre = Convert.ToString(textNombre.Text);
+            nuevo.Precio = precio;
+            nuevo.Genero = Convert.ToString(textGenero.Text);
+            nuevo.Consola = Convert.ToString(textConsola.Text);
+
+            if (ExisteElemento(nuevo.Nombre))
+            {
+                MessageBox.Show("Ya existe un elemento igual.");
+                return;
+            }
+
+            if (Primero == null)
+            {
+                Primero = nuevo;
+                Primero.Siguiente = null;
+                Ultimo = nuevo;
+            }
+            else
+            {
+                int longitud = ObtenerLongitud();
+                int posicionMedia = longitud / 2;
+
+                Nodo actual = Primero;
+                Nodo anterior = null;
+                int contador = 0;
+
+                while (contador < posicionMedia)
+                {
+                    anterior = actual;
+                    actual = actual.Siguiente;
+                    contador++;
+                }
+
+                nuevo.Siguiente = actual;
+                anterior.Siguiente = nuevo;
+            }
+        }
+
+        private int ObtenerLongitud()
+        {
+            int longitud = 0;
+            Nodo actual = Primero;
+
+            while (actual != null)
+            {
+                longitud++;
+                actual = actual.Siguiente;
+            }
+
+            return longitud;
+        }
 
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -289,6 +478,18 @@ namespace ProyectoED_CARS
         private void btnDescendente_Click(object sender, EventArgs e)
         {
             OrdenarDescendente();
+            Mostrar();
+        }
+
+        private void btnInsertarInicio_Click(object sender, EventArgs e)
+        {
+            InsertarAlInicio();
+            Mostrar();
+        }
+
+        private void btnInsertarMedio_Click(object sender, EventArgs e)
+        {
+            InsertarEnElMedio();
             Mostrar();
         }
     }
