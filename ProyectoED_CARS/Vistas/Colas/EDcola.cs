@@ -192,6 +192,9 @@ namespace ProyectoED_CARS
 
         public void Eliminar(string nombreBuscado)
         {
+            MessageBox.Show("en mantenimiento");
+
+            /*
             if (string.IsNullOrWhiteSpace(nombreBuscado))
             {
                 MessageBox.Show("Ingrese el nombre del elemento a eliminar.");
@@ -247,6 +250,7 @@ namespace ProyectoED_CARS
             {
                 MessageBox.Show("El elemento no existe.");
             }
+            */
         }
 
         public void OrdenarAscendente()
@@ -380,6 +384,8 @@ namespace ProyectoED_CARS
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("en mantenimiento");
+            /*
             string nombreBuscado = textNombreModificar.Text;
 
             try
@@ -396,7 +402,7 @@ namespace ProyectoED_CARS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
