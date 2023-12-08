@@ -52,6 +52,7 @@ namespace ProyectoED_CARS
                 //ActualizarDataGridView(videoJuego);
                 contador++;
             }
+            mostrar();
             //txtB_titulo.Text = null;
             //txtB_precio.Text = null;
             //txtB_genero.Text = null;
@@ -115,12 +116,14 @@ namespace ProyectoED_CARS
             }
 
             pilas.Modificar(videoJuego,objetivo);
+            mostrar();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             int objetivo = Convert.ToInt32(txtB_buscar.Text);
             pilas.Eliminar(objetivo);
+            mostrar();
         }
 
         private void button1_Click(object sender, EventArgs e)
