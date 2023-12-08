@@ -169,5 +169,11 @@
   <ItemGroup>
     <None Include="Resources\Cola.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview and Download Wallpaper - HD Wallpapers - Desktop Background Images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista__.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,8 +33,6 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnAcendente = new System.Windows.Forms.Button();
-            this.btnDescendente = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +48,7 @@
             this.textConsola = new System.Windows.Forms.TextBox();
             this.lblNombreAModificar = new System.Windows.Forms.Label();
             this.textNombreModificar = new System.Windows.Forms.TextBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,7 +57,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoED_CARS.Properties.Resources.Cola;
-            this.pictureBox2.Location = new System.Drawing.Point(516, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(529, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(158, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,10 +76,10 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.btnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(34)))), ((int)(((byte)(67)))));
             this.btnInsertar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(37, 110);
+            this.btnInsertar.Location = new System.Drawing.Point(203, 110);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(135, 54);
             this.btnInsertar.TabIndex = 2;
@@ -90,10 +89,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(67)))));
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(64)))), ((int)(((byte)(82)))));
             this.btnModificar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(273, 110);
+            this.btnModificar.Location = new System.Drawing.Point(539, 110);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(135, 54);
             this.btnModificar.TabIndex = 3;
@@ -103,42 +102,16 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(64)))), ((int)(((byte)(82)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.btnEliminar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(516, 110);
+            this.btnEliminar.Location = new System.Drawing.Point(867, 110);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 54);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnAcendente
-            // 
-            this.btnAcendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
-            this.btnAcendente.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcendente.ForeColor = System.Drawing.Color.White;
-            this.btnAcendente.Location = new System.Drawing.Point(737, 110);
-            this.btnAcendente.Name = "btnAcendente";
-            this.btnAcendente.Size = new System.Drawing.Size(154, 54);
-            this.btnAcendente.TabIndex = 5;
-            this.btnAcendente.Text = "Acendente";
-            this.btnAcendente.UseVisualStyleBackColor = false;
-            this.btnAcendente.Click += new System.EventHandler(this.btnAcendente_Click);
-            // 
-            // btnDescendente
-            // 
-            this.btnDescendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(66)))));
-            this.btnDescendente.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescendente.ForeColor = System.Drawing.Color.White;
-            this.btnDescendente.Location = new System.Drawing.Point(960, 110);
-            this.btnDescendente.Name = "btnDescendente";
-            this.btnDescendente.Size = new System.Drawing.Size(178, 54);
-            this.btnDescendente.TabIndex = 6;
-            this.btnDescendente.Text = "Descendente";
-            this.btnDescendente.UseVisualStyleBackColor = false;
-            this.btnDescendente.Click += new System.EventHandler(this.btnDescendente_Click);
             // 
             // dataGridView1
             // 
@@ -150,12 +123,12 @@
             this.Precio,
             this.Genero,
             this.Consola});
-            this.dataGridView1.Location = new System.Drawing.Point(239, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(138, 194);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(696, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(1000, 222);
             this.dataGridView1.TabIndex = 7;
             // 
             // Nombre
@@ -291,11 +264,25 @@
             this.textNombreModificar.Size = new System.Drawing.Size(226, 26);
             this.textNombreModificar.TabIndex = 22;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1017, 613);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(135, 54);
+            this.btnCerrar.TabIndex = 23;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // EDcola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 706);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.textNombreModificar);
             this.Controls.Add(this.lblNombreAModificar);
             this.Controls.Add(this.textConsola);
@@ -307,8 +294,6 @@
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnDescendente);
-            this.Controls.Add(this.btnAcendente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnInsertar);
@@ -332,8 +317,6 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnAcendente;
-        private System.Windows.Forms.Button btnDescendente;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
@@ -349,5 +332,6 @@
         private System.Windows.Forms.TextBox textConsola;
         private System.Windows.Forms.Label lblNombreAModificar;
         private System.Windows.Forms.TextBox textNombreModificar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

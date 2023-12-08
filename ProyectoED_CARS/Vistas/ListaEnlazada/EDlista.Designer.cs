@@ -49,6 +49,8 @@
             this.textConsola = new System.Windows.Forms.TextBox();
             this.lblNombreAModificar = new System.Windows.Forms.Label();
             this.textNombreModificar = new System.Windows.Forms.TextBox();
+            this.btnInsertarInicio = new System.Windows.Forms.Button();
+            this.btnInsertarMedio = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,23 +60,23 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
             this.btnInsertar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(12, 91);
+            this.btnInsertar.Location = new System.Drawing.Point(47, 100);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(145, 46);
+            this.btnInsertar.Size = new System.Drawing.Size(196, 46);
             this.btnInsertar.TabIndex = 1;
-            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.Text = "Insertar Final";
             this.btnInsertar.UseVisualStyleBackColor = false;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(83)))), ((int)(((byte)(140)))));
             this.btnModificar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(256, 91);
+            this.btnModificar.Location = new System.Drawing.Point(308, 100);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(141, 46);
             this.btnModificar.TabIndex = 2;
@@ -84,10 +86,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(83)))), ((int)(((byte)(140)))));
             this.btnEliminar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(511, 91);
+            this.btnEliminar.Location = new System.Drawing.Point(525, 100);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(139, 46);
             this.btnEliminar.TabIndex = 3;
@@ -97,10 +99,10 @@
             // 
             // btnAcendente
             // 
-            this.btnAcendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnAcendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(83)))), ((int)(((byte)(140)))));
             this.btnAcendente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcendente.ForeColor = System.Drawing.Color.White;
-            this.btnAcendente.Location = new System.Drawing.Point(747, 91);
+            this.btnAcendente.Location = new System.Drawing.Point(747, 100);
             this.btnAcendente.Name = "btnAcendente";
             this.btnAcendente.Size = new System.Drawing.Size(159, 46);
             this.btnAcendente.TabIndex = 4;
@@ -110,10 +112,10 @@
             // 
             // btnDescendente
             // 
-            this.btnDescendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnDescendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
             this.btnDescendente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescendente.ForeColor = System.Drawing.Color.White;
-            this.btnDescendente.Location = new System.Drawing.Point(979, 91);
+            this.btnDescendente.Location = new System.Drawing.Point(979, 100);
             this.btnDescendente.Name = "btnDescendente";
             this.btnDescendente.Size = new System.Drawing.Size(172, 46);
             this.btnDescendente.TabIndex = 5;
@@ -123,7 +125,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(43)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -168,7 +170,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.btnCerrar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Location = new System.Drawing.Point(1029, 636);
@@ -182,48 +184,48 @@
             // lblNombreJuego
             // 
             this.lblNombreJuego.AutoSize = true;
-            this.lblNombreJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
-            this.lblNombreJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(107)))), ((int)(((byte)(140)))));
+            this.lblNombreJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreJuego.ForeColor = System.Drawing.Color.White;
             this.lblNombreJuego.Location = new System.Drawing.Point(42, 464);
             this.lblNombreJuego.Name = "lblNombreJuego";
-            this.lblNombreJuego.Size = new System.Drawing.Size(87, 25);
+            this.lblNombreJuego.Size = new System.Drawing.Size(107, 29);
             this.lblNombreJuego.TabIndex = 12;
             this.lblNombreJuego.Text = "Nombre";
             // 
             // lblPrecioJuego
             // 
             this.lblPrecioJuego.AutoSize = true;
-            this.lblPrecioJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
-            this.lblPrecioJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(107)))), ((int)(((byte)(140)))));
+            this.lblPrecioJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioJuego.ForeColor = System.Drawing.Color.White;
             this.lblPrecioJuego.Location = new System.Drawing.Point(42, 522);
             this.lblPrecioJuego.Name = "lblPrecioJuego";
-            this.lblPrecioJuego.Size = new System.Drawing.Size(73, 25);
+            this.lblPrecioJuego.Size = new System.Drawing.Size(89, 29);
             this.lblPrecioJuego.TabIndex = 13;
             this.lblPrecioJuego.Text = "Precio";
             // 
             // lblGeneroJuego
             // 
             this.lblGeneroJuego.AutoSize = true;
-            this.lblGeneroJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
-            this.lblGeneroJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneroJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(107)))), ((int)(((byte)(140)))));
+            this.lblGeneroJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGeneroJuego.ForeColor = System.Drawing.Color.White;
             this.lblGeneroJuego.Location = new System.Drawing.Point(42, 575);
             this.lblGeneroJuego.Name = "lblGeneroJuego";
-            this.lblGeneroJuego.Size = new System.Drawing.Size(83, 25);
+            this.lblGeneroJuego.Size = new System.Drawing.Size(100, 29);
             this.lblGeneroJuego.TabIndex = 14;
             this.lblGeneroJuego.Text = "Genero";
             // 
             // lblConsolaJuego
             // 
             this.lblConsolaJuego.AutoSize = true;
-            this.lblConsolaJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
-            this.lblConsolaJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsolaJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(67)))), ((int)(((byte)(91)))));
+            this.lblConsolaJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsolaJuego.ForeColor = System.Drawing.Color.White;
             this.lblConsolaJuego.Location = new System.Drawing.Point(42, 636);
             this.lblConsolaJuego.Name = "lblConsolaJuego";
-            this.lblConsolaJuego.Size = new System.Drawing.Size(92, 25);
+            this.lblConsolaJuego.Size = new System.Drawing.Size(109, 29);
             this.lblConsolaJuego.TabIndex = 15;
             this.lblConsolaJuego.Text = "Consola";
             // 
@@ -237,7 +239,7 @@
             // 
             // textPrecio
             // 
-            this.textPrecio.Location = new System.Drawing.Point(160, 521);
+            this.textPrecio.Location = new System.Drawing.Point(160, 522);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(139, 26);
             this.textPrecio.TabIndex = 17;
@@ -245,7 +247,7 @@
             // 
             // textGenero
             // 
-            this.textGenero.Location = new System.Drawing.Point(160, 576);
+            this.textGenero.Location = new System.Drawing.Point(160, 578);
             this.textGenero.Name = "textGenero";
             this.textGenero.Size = new System.Drawing.Size(139, 26);
             this.textGenero.TabIndex = 18;
@@ -277,9 +279,35 @@
             this.textNombreModificar.TabIndex = 21;
             this.textNombreModificar.TextChanged += new System.EventHandler(this.textNombreModificar_TextChanged);
             // 
+            // btnInsertarInicio
+            // 
+            this.btnInsertarInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
+            this.btnInsertarInicio.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertarInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInsertarInicio.Location = new System.Drawing.Point(992, 203);
+            this.btnInsertarInicio.Name = "btnInsertarInicio";
+            this.btnInsertarInicio.Size = new System.Drawing.Size(159, 88);
+            this.btnInsertarInicio.TabIndex = 22;
+            this.btnInsertarInicio.Text = "Insertar Inicio";
+            this.btnInsertarInicio.UseVisualStyleBackColor = false;
+            this.btnInsertarInicio.Click += new System.EventHandler(this.btnInsertarInicio_Click);
+            // 
+            // btnInsertarMedio
+            // 
+            this.btnInsertarMedio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
+            this.btnInsertarMedio.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertarMedio.ForeColor = System.Drawing.Color.White;
+            this.btnInsertarMedio.Location = new System.Drawing.Point(47, 203);
+            this.btnInsertarMedio.Name = "btnInsertarMedio";
+            this.btnInsertarMedio.Size = new System.Drawing.Size(159, 88);
+            this.btnInsertarMedio.TabIndex = 23;
+            this.btnInsertarMedio.Text = "Insertar Medio";
+            this.btnInsertarMedio.UseVisualStyleBackColor = false;
+            this.btnInsertarMedio.Click += new System.EventHandler(this.btnInsertarMedio_Click);
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ProyectoED_CARS.Properties.Resources.lista;
+            this.pictureBox2.Image = global::ProyectoED_CARS.Properties.Resources.lista__;
             this.pictureBox2.Location = new System.Drawing.Point(396, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(369, 73);
@@ -289,7 +317,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoED_CARS.Properties.Resources.Azul;
+            this.pictureBox1.Image = global::ProyectoED_CARS.Properties.Resources.Preview_and_Download_Wallpaper___HD_Wallpapers___Desktop_Background_Images;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1196, 715);
@@ -303,6 +331,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1191, 706);
+            this.Controls.Add(this.btnInsertarMedio);
+            this.Controls.Add(this.btnInsertarInicio);
             this.Controls.Add(this.textNombreModificar);
             this.Controls.Add(this.lblNombreAModificar);
             this.Controls.Add(this.textConsola);
@@ -358,5 +388,7 @@
         private System.Windows.Forms.TextBox textConsola;
         private System.Windows.Forms.Label lblNombreAModificar;
         private System.Windows.Forms.TextBox textNombreModificar;
+        private System.Windows.Forms.Button btnInsertarInicio;
+        private System.Windows.Forms.Button btnInsertarMedio;
     }
 }
