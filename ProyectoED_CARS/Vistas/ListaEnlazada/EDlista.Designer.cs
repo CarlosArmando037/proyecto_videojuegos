@@ -28,99 +28,335 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAcendente = new System.Windows.Forms.Button();
+            this.btnDescendente = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Consola = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblNombreJuego = new System.Windows.Forms.Label();
+            this.lblPrecioJuego = new System.Windows.Forms.Label();
+            this.lblGeneroJuego = new System.Windows.Forms.Label();
+            this.lblConsolaJuego = new System.Windows.Forms.Label();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textPrecio = new System.Windows.Forms.TextBox();
+            this.textGenero = new System.Windows.Forms.TextBox();
+            this.textConsola = new System.Windows.Forms.TextBox();
+            this.lblNombreAModificar = new System.Windows.Forms.Label();
+            this.textNombreModificar = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnInsertar
             // 
-            this.button1.Location = new System.Drawing.Point(352, 106);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnInsertar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.ForeColor = System.Drawing.Color.White;
+            this.btnInsertar.Location = new System.Drawing.Point(12, 91);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(145, 46);
+            this.btnInsertar.TabIndex = 1;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.Location = new System.Drawing.Point(652, 106);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnModificar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(256, 91);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(141, 46);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(92, 106);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Añadir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(511, 91);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(139, 46);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button4
+            // btnAcendente
             // 
-            this.button4.Location = new System.Drawing.Point(916, 106);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 35);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Listar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAcendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnAcendente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcendente.ForeColor = System.Drawing.Color.White;
+            this.btnAcendente.Location = new System.Drawing.Point(747, 91);
+            this.btnAcendente.Name = "btnAcendente";
+            this.btnAcendente.Size = new System.Drawing.Size(159, 46);
+            this.btnAcendente.TabIndex = 4;
+            this.btnAcendente.Text = "Acendente";
+            this.btnAcendente.UseVisualStyleBackColor = false;
+            this.btnAcendente.Click += new System.EventHandler(this.btnAcendente_Click);
             // 
-            // listBox1
+            // btnDescendente
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(88, 218);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(937, 304);
-            this.listBox1.TabIndex = 4;
+            this.btnDescendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnDescendente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescendente.ForeColor = System.Drawing.Color.White;
+            this.btnDescendente.Location = new System.Drawing.Point(979, 91);
+            this.btnDescendente.Name = "btnDescendente";
+            this.btnDescendente.Size = new System.Drawing.Size(172, 46);
+            this.btnDescendente.TabIndex = 5;
+            this.btnDescendente.Text = "Descendente";
+            this.btnDescendente.UseVisualStyleBackColor = false;
+            this.btnDescendente.Click += new System.EventHandler(this.btnDescendente_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Precio,
+            this.Genero,
+            this.Consola});
+            this.dataGridView1.Location = new System.Drawing.Point(256, 179);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(677, 272);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 8;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 8;
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 150;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.MinimumWidth = 8;
+            this.Genero.Name = "Genero";
+            this.Genero.Width = 150;
+            // 
+            // Consola
+            // 
+            this.Consola.HeaderText = "Consola";
+            this.Consola.MinimumWidth = 8;
+            this.Consola.Name = "Consola";
+            this.Consola.Width = 150;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(1062, 646);
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1029, 636);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(114, 34);
-            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Size = new System.Drawing.Size(122, 46);
+            this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // lblNombreJuego
+            // 
+            this.lblNombreJuego.AutoSize = true;
+            this.lblNombreJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.lblNombreJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreJuego.ForeColor = System.Drawing.Color.White;
+            this.lblNombreJuego.Location = new System.Drawing.Point(42, 464);
+            this.lblNombreJuego.Name = "lblNombreJuego";
+            this.lblNombreJuego.Size = new System.Drawing.Size(87, 25);
+            this.lblNombreJuego.TabIndex = 12;
+            this.lblNombreJuego.Text = "Nombre";
+            // 
+            // lblPrecioJuego
+            // 
+            this.lblPrecioJuego.AutoSize = true;
+            this.lblPrecioJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.lblPrecioJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioJuego.ForeColor = System.Drawing.Color.White;
+            this.lblPrecioJuego.Location = new System.Drawing.Point(42, 522);
+            this.lblPrecioJuego.Name = "lblPrecioJuego";
+            this.lblPrecioJuego.Size = new System.Drawing.Size(73, 25);
+            this.lblPrecioJuego.TabIndex = 13;
+            this.lblPrecioJuego.Text = "Precio";
+            // 
+            // lblGeneroJuego
+            // 
+            this.lblGeneroJuego.AutoSize = true;
+            this.lblGeneroJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.lblGeneroJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneroJuego.ForeColor = System.Drawing.Color.White;
+            this.lblGeneroJuego.Location = new System.Drawing.Point(42, 575);
+            this.lblGeneroJuego.Name = "lblGeneroJuego";
+            this.lblGeneroJuego.Size = new System.Drawing.Size(83, 25);
+            this.lblGeneroJuego.TabIndex = 14;
+            this.lblGeneroJuego.Text = "Genero";
+            // 
+            // lblConsolaJuego
+            // 
+            this.lblConsolaJuego.AutoSize = true;
+            this.lblConsolaJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.lblConsolaJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsolaJuego.ForeColor = System.Drawing.Color.White;
+            this.lblConsolaJuego.Location = new System.Drawing.Point(42, 636);
+            this.lblConsolaJuego.Name = "lblConsolaJuego";
+            this.lblConsolaJuego.Size = new System.Drawing.Size(92, 25);
+            this.lblConsolaJuego.TabIndex = 15;
+            this.lblConsolaJuego.Text = "Consola";
+            // 
+            // textNombre
+            // 
+            this.textNombre.Location = new System.Drawing.Point(160, 464);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(139, 26);
+            this.textNombre.TabIndex = 16;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
+            // 
+            // textPrecio
+            // 
+            this.textPrecio.Location = new System.Drawing.Point(160, 521);
+            this.textPrecio.Name = "textPrecio";
+            this.textPrecio.Size = new System.Drawing.Size(139, 26);
+            this.textPrecio.TabIndex = 17;
+            this.textPrecio.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textGenero
+            // 
+            this.textGenero.Location = new System.Drawing.Point(160, 576);
+            this.textGenero.Name = "textGenero";
+            this.textGenero.Size = new System.Drawing.Size(139, 26);
+            this.textGenero.TabIndex = 18;
+            // 
+            // textConsola
+            // 
+            this.textConsola.Location = new System.Drawing.Point(160, 635);
+            this.textConsola.Name = "textConsola";
+            this.textConsola.Size = new System.Drawing.Size(139, 26);
+            this.textConsola.TabIndex = 19;
+            // 
+            // lblNombreAModificar
+            // 
+            this.lblNombreAModificar.AutoSize = true;
+            this.lblNombreAModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(49)))));
+            this.lblNombreAModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreAModificar.ForeColor = System.Drawing.Color.White;
+            this.lblNombreAModificar.Location = new System.Drawing.Point(468, 454);
+            this.lblNombreAModificar.Name = "lblNombreAModificar";
+            this.lblNombreAModificar.Size = new System.Drawing.Size(297, 25);
+            this.lblNombreAModificar.TabIndex = 20;
+            this.lblNombreAModificar.Text = "Nombre a modificar o eliminar";
+            // 
+            // textNombreModificar
+            // 
+            this.textNombreModificar.Location = new System.Drawing.Point(525, 491);
+            this.textNombreModificar.Name = "textNombreModificar";
+            this.textNombreModificar.Size = new System.Drawing.Size(193, 26);
+            this.textNombreModificar.TabIndex = 21;
+            this.textNombreModificar.TextChanged += new System.EventHandler(this.textNombreModificar_TextChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoED_CARS.Properties.Resources.lista;
+            this.pictureBox2.Location = new System.Drawing.Point(396, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(369, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoED_CARS.Properties.Resources.Azul;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1196, 715);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // EDlista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1191, 706);
+            this.Controls.Add(this.textNombreModificar);
+            this.Controls.Add(this.lblNombreAModificar);
+            this.Controls.Add(this.textConsola);
+            this.Controls.Add(this.textGenero);
+            this.Controls.Add(this.textPrecio);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.lblConsolaJuego);
+            this.Controls.Add(this.lblGeneroJuego);
+            this.Controls.Add(this.lblPrecioJuego);
+            this.Controls.Add(this.lblNombreJuego);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnDescendente);
+            this.Controls.Add(this.btnAcendente);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnInsertar);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EDlista";
             this.Text = "EDlista";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAcendente;
+        private System.Windows.Forms.Button btnDescendente;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Consola;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblNombreJuego;
+        private System.Windows.Forms.Label lblPrecioJuego;
+        private System.Windows.Forms.Label lblGeneroJuego;
+        private System.Windows.Forms.Label lblConsolaJuego;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textPrecio;
+        private System.Windows.Forms.TextBox textGenero;
+        private System.Windows.Forms.TextBox textConsola;
+        private System.Windows.Forms.Label lblNombreAModificar;
+        private System.Windows.Forms.TextBox textNombreModificar;
     }
 }
