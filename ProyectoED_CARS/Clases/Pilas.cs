@@ -85,29 +85,33 @@ namespace ProyectoED_CARS.Clases
             {
                 MessageBox.Show("no se aceptan numeros negativos");
             }
-            for (int i = cantidadReal-1; i > -1; i--)
+            else
             {
-                if (i != objetivo)
+                for (int i = cantidadReal-1; i > -1; i--)
                 {
-                    pilaAux[cantidadReealAux] = pilas[i];
-                    cantidadReealAux++;
-                    pilas[i] = null;
-                    cantidadReal--;
+                    if (i != objetivo)
+                    {
+                        pilaAux[cantidadReealAux] = pilas[i];
+                        cantidadReealAux++;
+                        pilas[i] = null;
+                        cantidadReal--;
+                    }
+                    else
+                    {
+                        pilas[i] = null;
+                        cantidadReal--;
+                        break; 
+                    }
                 }
-                else
+                for (int i = cantidadReealAux-1; i > -1; i--)
                 {
-                    pilas[i] = null;
-                    cantidadReal--;
-                    break; 
-                }
-            }
-            for (int i = cantidadReealAux-1; i > -1; i--)
-            {
 
-                pilas[cantidadReal] = pilaAux[i];
-                pilaAux[i] = null;
-                cantidadReealAux--;
+                    pilas[cantidadReal] = pilaAux[i];
+                    pilaAux[i] = null;
+                    cantidadReealAux--;
+                }
             }
+            
         }
         public void RecorrerArreglo()
         {
@@ -196,7 +200,7 @@ namespace ProyectoED_CARS.Clases
             {
                 MessageBox.Show("no se aceptan numeros negativos");
             }
-            for (int i = cantidadReal; i > 0; i--)
+            for (int i = cantidadReal-1; i > 0; i--)
             {
                 if (i != objetivo)
                 {
@@ -210,7 +214,7 @@ namespace ProyectoED_CARS.Clases
                     pilas[i] = videojuego;
                 }
             }
-            for (int i = cantidadReealAux; i > 0 ; i--)
+            for (int i = cantidadReealAux-1; i > 0 ; i--)
             {
                 pilas[cantidadReal] = pilaAux[i];
                 cantidadReal++;

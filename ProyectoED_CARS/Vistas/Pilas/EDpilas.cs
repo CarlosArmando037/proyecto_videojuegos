@@ -117,6 +117,10 @@ namespace ProyectoED_CARS
 
             pilas.Modificar(videoJuego,objetivo);
             mostrar();
+            comboBox1.Text = null;
+            txtB_titulo.Clear();
+            txtB_precio.Clear();
+            txtB_genero.Clear();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
